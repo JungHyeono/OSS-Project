@@ -28,21 +28,40 @@ class MyHomePage extends StatelessWidget {
       appBar:AppBar(
         title:Text('Rabbitcal'),
       ),
-          body:Column(
-crossAxisAlignment: CrossAxisAlignment.center,
-            children:<Widget>[
-              Image.asset('Rabbitcal.jpg',
-              width:500,height:500,
-              ),
+          body: Center(
+            child: Container(
+              padding: EdgeInsets.all(10),
+              margin:EdgeInsets.all(10),
+              child: Column(
+                children:[
 
-             Container( Text('인바디 등록',
-              style:TextStyle(fontSize:40),
-              ),),
-              Text('운동추천',
-              style:TextStyle(fontSize:40),),
-            ]
-          )
+                  Image.asset('Rabbitcal.jpg',width:400,height:400),
 
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      margin:EdgeInsets.all(10),
+                      child: RaisedButton(
+                        child: Text('등록'),
+                        color:Colors.white,
+                        onPressed: () {},
+                  ),
+                    ),
+                    Container(
+                          padding: EdgeInsets.all(10),
+                          margin:EdgeInsets.all(10),
+                      child: RaisedButton(
+                        style: RaisedButton.styleFrom(
+
+                        ),
+                          child: Text('추천'),
+                          color:Colors.white,
+                          onPressed: () {}
+                      ),
+                    ),
+                  ]
+    ),
+    ),
+          ),
     );
   }
 }
