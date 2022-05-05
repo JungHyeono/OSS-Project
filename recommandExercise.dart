@@ -57,3 +57,47 @@ class first extends StatelessWidget {
         ));
   }
 }
+
+class detail1 extends StatelessWidget {
+  const detail1({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("팔의 세부 운동"),
+        ),
+        body: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('이두근육'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail1_1()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.event),
+              title: Text('삼두근육'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail1_2()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.camera),
+              title: Text('전완근육'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail1_3()));
+              },
+            )
+          ],
+        ));
+  }
+}
