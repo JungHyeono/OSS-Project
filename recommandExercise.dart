@@ -101,3 +101,119 @@ class detail1 extends StatelessWidget {
         ));
   }
 }
+class detail2 extends StatelessWidget {
+  const detail2({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("다리의 세부 운동"),
+        ),
+        body: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('대퇴근'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail2_1()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('대퇴이두근'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail2_2()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.event),
+              title: Text('대둔근'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail2_3()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.camera),
+              title: Text('비복근'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail2_4()));
+              },
+            )
+          ],
+        ));
+  }
+}
+
+class detail3 extends StatelessWidget {
+  const detail3({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("몸통의 세부 운동"),
+        ),
+        body: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('대흉근'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail3_1()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('복근'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail3_2()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.event),
+              title: Text('승모근'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail3_3()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.camera),
+              title: Text('삼각근'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail3_4()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.event),
+              title: Text('광배근'),
+              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => veryDetail3_5()));
+              },
+            ),
+
+          ],
+        ));
+  }
+}
+
