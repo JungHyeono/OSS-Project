@@ -310,3 +310,162 @@ class veryDetail1_1 extends StatelessWidget {
   }
 }
 
+class veryDetail1_2 extends StatelessWidget {
+  const veryDetail1_2({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("사용자님에 맞는 삼두근육 운동법"),
+        ),
+        body: Column(
+            children: [
+              Row(children: <Widget>[
+                Text(
+                  "삼두근육이란?",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ]),
+              Row(children: <Widget>[
+                Text(
+                  " ",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ]),
+              Row(children: <Widget>[
+                Image.asset(
+                  'images/3du.png',
+                  fit: BoxFit.fill,
+                  width: 300,
+                  height: 300,
+                ),
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text: TextSpan(
+                            text:
+                            '삼두근은 한자 그대로 머리가 세 개인, 즉 근육이 이는곳(시작하는 곳)에서 세 갈래로 일어나는 근육을 말한다.',
+                            style: TextStyle(fontSize: 17)))),
+              ]
+              ),
+              Row(children: [
+                Expanded(child: Container(
+                  color: Colors.black, width: 100, height: 5,))
+              ],),
+              Row(children: [
+                Text(
+                  '사용자님에게 추천하는 운동은 저강도 운동입니다!', style: TextStyle(fontSize: 30),)
+              ],),
+              Row(children: [
+                Expanded(child:
+                GestureDetector(
+                  onTap: (){
+                    _launchInBrowser('https://www.youtube.com');
+                  },
+                  child: Container(color: Colors.white, width: 100, height: 50,
+                    child: Row(
+                      children: [
+                        Column(
+                          children: [
+                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Center(child:
+                            Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                          ],
+                        ),
+                      ],),
+                  ),
+                ),),
+              ],
+              ),
+            ])
+    );
+  }
+}
+
+class veryDetail1_3 extends StatelessWidget {
+  const veryDetail1_3({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("사용자님에 맞는 전완근육 운동법"),
+        ),
+        body: Column(
+            children: [
+              Row(children: <Widget>[
+                Text(
+                  "전완근육이란?",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ]),
+              Row(children: <Widget>[
+                Text(
+                  " ",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ]),
+              Row(children: <Widget>[
+                Image.asset(
+                  'images/junwan.jpg',
+                  fit: BoxFit.fill,
+                  width: 300,
+                  height: 300,
+                ),
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text: TextSpan(
+                            text:
+                            '아래팔에 있는 근육',
+                            style: TextStyle(fontSize: 17)))),
+              ]
+              ),
+              Row(children: [
+                Expanded(child: Container(
+                  color: Colors.black, width: 100, height: 5,))
+              ],),
+              Row(children: [
+                Text(
+                  '사용자님에게 추천하는 운동은 저강도 운동입니다!', style: TextStyle(fontSize: 30),)
+              ],),
+              Row(children: [
+                Expanded(child:
+                GestureDetector(
+                  onTap: (){
+                    _launchInBrowser('https://www.youtube.com');
+                  },
+                  child: Container(color: Colors.white, width: 100, height: 50,
+                    child: Row(
+                      children: [
+                        Column(
+                          children: [
+                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Center(child:
+                            Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                          ],
+                        ),
+                      ],),
+                  ),
+                ),),
+              ],
+              ),
+            ])
+    );
+  }
+}
+
+
