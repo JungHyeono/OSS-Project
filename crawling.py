@@ -1,5 +1,6 @@
 import requests
 
+
 from bs4 import BeautifulSoup as bs
 
 response=requests.get('https://www.coupang.com/np/search?q=%EB%8B%A8%EB%B0%B1%EC%A7%88%20%EB%B3%B4%EC%B6%A9%EC%A0%9C&channel=recent')
