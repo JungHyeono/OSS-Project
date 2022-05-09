@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: '출석체크 데모버전'),
     );
   }
 }
@@ -97,10 +96,12 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               '출석체크를 하려면 버튼을 클릭하세요.',
+              style: TextStyle(fontSize: 20),
             ),
+            Container(height: 70,),
             Text(
-              '$date',
-              style: Theme.of(context).textTheme.displayLarge,
+              '출석체크 ${date.length} 일차! \n 등급 : <${userName(date.length)}> \n 입니다!',
+              style: Theme.of(context).textTheme.displaySmall,
             ),
           ],
         ),
