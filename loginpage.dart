@@ -19,10 +19,19 @@ class MyApp extends StatelessWidget {
             Container(color: Colors.blue[50],),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(width: 200,height: 200,color: Colors.blue,),
-                Container(height: 50,),
+                //Container(height: 50,),
+                Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 50, left: 30,right: 30),
+                    child : FittedBox(
+                      fit:BoxFit.contain,
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage("https://picsum.photos/200"),
+                      ),
+                    )
+                ),),
                 Stack(children: [
                   Padding(
                     padding: EdgeInsets.all(10),
@@ -85,3 +94,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
