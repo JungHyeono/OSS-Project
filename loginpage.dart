@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
                             controller: _emailController,
                             decoration: InputDecoration(icon: Icon(Icons.account_circle),labelText: "이메일"),
                             validator: (value){
-                              if(value==' '){
+                              if(value!.isEmpty){
                                 return "올바르지 않는 이메일입니다.";
                               }
                               return null;
@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
                             controller: _passwordController,
                             decoration: InputDecoration(icon: Icon(Icons.vpn_key),labelText: "비밀번호"),
                             validator: (value){
-                              if(value==' '){
+                              if(value!.isEmpty){
                                 return "올바르지 않는 비밀번호입니다.";
                               }
                               return null;
@@ -74,13 +74,20 @@ class MyApp extends StatelessWidget {
                   left:10,
                   right: 10,
                   bottom: 0,
-                  child: RaisedButton(
-                      child: Text("login"),
-                      color: Colors.blue[100],
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      onPressed: (){}
+                  child: SizedBox(
+                    width: 200,
+                    child: RaisedButton(
+                        child: Text("로그인"),
+                        color: Colors.blue[100],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        onPressed: (){
+                          if(_formKey.currentState!.validate()){
+                            print("button pressed!");
+                          }
+                        }
+                    ),
                   ),
                 ),
                 Container(height:10,),
@@ -94,4 +101,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
