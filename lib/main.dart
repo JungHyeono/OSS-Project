@@ -25,11 +25,20 @@ class Rabbitcalmain extends StatelessWidget {
   Widget build(BuildContext context){
     return Scaffold(
         appBar:AppBar(
-        title:Text('Rabbitcal',style:TextStyle(
-        fontWeight:FontWeight.bold,
-        fontSize: 40,
+          title:Text('Rabbitcal',style:TextStyle(
+            fontWeight:FontWeight.bold,
+            fontSize: 40,
+          ),
+          ),
+          centerTitle:true,
+        ),
+        body: Center(
+        child: Container(
+    child: Column(
+    children:<Widget>[
+    Container(
+    child: Image.asset('assets/rabbitcal.jpg',width:300,height:300)
     ),
     ),
-    centerTitle:true,
     ),
-  }
+    ),
