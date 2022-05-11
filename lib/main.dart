@@ -19,11 +19,17 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-class Rabbicalmain extends StatelessWidget {
-  const Rabbicalmain({Key? key}) : super(key: key);
 
+class Rabbitcalmain extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return Container();
+  Widget build(BuildContext context){
+    return Scaffold(
+        appBar:AppBar(
+        title:Text('Rabbitcal',style:TextStyle(
+        fontWeight:FontWeight.bold,
+        fontSize: 40,
+    ),
+    ),
+    centerTitle:true,
+    ),
   }
-}
