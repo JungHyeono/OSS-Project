@@ -51,7 +51,11 @@ class Rabbitcalmain extends StatelessWidget {
     fontWeight:FontWeight.bold,
     fontSize: 30,
     ),),
+    color:Colors.white,
     ),
+    shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(20),
+    ),)
 
     Container(
     width:250,height:80,
@@ -61,5 +65,12 @@ class Rabbitcalmain extends StatelessWidget {
     child: Text('운동 추천',style:TextStyle(
     fontWeight:FontWeight.bold,
     fontSize: 30,
-    ),),)
+    ),),
+
+    color:Colors.white,
+    ),
+
+    shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(20),
+    ),)
 
