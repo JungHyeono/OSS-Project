@@ -39,6 +39,18 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
         ),
         centerTitle: true,
       ),
+      body:Center(
+    child:Column(
+      children:<Widget>[
+    Container(
+    width:500,height:70,
+    child: TextField(
+
+    ),
+    ),
+      ]
+    )
+      ),
     );
   }
 }
