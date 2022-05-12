@@ -28,6 +28,7 @@ class Rabbitcal_registration extends StatefulWidget {
 }
 
 class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
+  String Weight="";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,12 +43,16 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
       body:Center(
     child:Column(
       children:<Widget>[
+
     Container(
     width:500,height:70,
     child: TextField(
-
-    ),
-    ),
+    style: TextStyle(fontSize:22),
+    textAlign:TextAlign.center,
+    decoration: InputDecoration(hintText:'몸무게'),
+    onChanged: (String value){
+    Weight =value;
+    },
       ]
     )
       ),
