@@ -64,6 +64,41 @@ class ProteinPowder {
   }
 }
 
+class Aerobic {
+  int? id;
+  String? image;
+  String? title;
+  String? price;
+
+  Aerobic({this.id, this.image, this.title, this.price});
+
+  factory Aerobic.fromJson(Map<String, dynamic> parsedjson) {
+    return Aerobic(
+        id :parsedjson['id'],
+        image : parsedjson['image'],
+        title : parsedjson['title'],
+        price : parsedjson['price']);
+  }
+}
+
+class Weight {
+  int? id;
+  String? image;
+  String? title;
+  String? price;
+
+  Weight({this.id, this.image, this.title, this.price});
+
+  factory Weight.fromJson(Map<String, dynamic> parsedjson) {
+    return Weight(
+        id :parsedjson['id'],
+        image : parsedjson['image'],
+        title : parsedjson['title'],
+        price : parsedjson['price']);
+  }
+}
+
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
