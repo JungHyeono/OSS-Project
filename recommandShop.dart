@@ -1,16 +1,30 @@
 import 'package:flutter/cupertino.dart';
+import 'package:http/http.dart'as http;
+import 'dart:convert';
 import 'package:flutter/material.dart';
 
 
 
-void main() {
+void main() async{
   runApp(const MyApp());
+  print(fetchRecommandPd());
 }
+
+Future<recommandPd> fetchRecommandPd() async{
+  String url="https://my-json-server.typicode.com/juhojang/coupang/db";
+  var response=await http.get(url);
+
+  if(response.statusCode==200){
+    return recommandPd.fromJson(json.decode(response.body));
+  } else{
+    throw Exception('failed to load post');
+  }
+}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,8 +37,10 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
 class recommandShop extends StatelessWidget {
   const recommandShop({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -142,7 +158,7 @@ class shopDetail_1 extends StatelessWidget {
                     Container(
                       width:50,
                       height: 50,
-                      child: Image.asset(imageList1_1[index])
+                      child: Image.network("https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/rs_quotation_api/9snggkvl/70e4f9a748ae4990a2f8d2f4871a1d96.jpg")
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
@@ -292,3 +308,4 @@ class shopDetail_3 extends StatelessWidget {
     );
   }
 }
+
