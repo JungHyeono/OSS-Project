@@ -237,54 +237,72 @@ class shopDetail_1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "단백질파우더 추천 순위 Top 5",
-          style: TextStyle(color: Colors.white),
+        appBar: AppBar(
+          title: Text(
+            "단백질파우더 추천 순위 Top 5",
+            style: TextStyle(color: Colors.white),
+          ),
         ),
-      ),
-      body:
-      ListView.builder(
-        itemCount: 5,
-          itemBuilder: (context, index){
-            return GestureDetector(
-              child: Card(
-                child: Row(
-                  children: [
-                    Container(
-                      width:50,
-                      height: 50,
-                      child: Image.network(imageList1_1[index])
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            titleList1_1[index],
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
+        body:
+        ListView.builder(
+            itemCount: titleList1_1.length,
+            itemBuilder: (context, index){
+              return GestureDetector(
+                child: Card(
+                  child: Row(
+                    children: [
+                      Container(
+                          width:50,
+                          height: 50,
+                          child: Image.network(imageList1_1[index])
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                                width: 270,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Flexible(
+                                        child:
+                                        RichText(
+                                          overflow: TextOverflow.ellipsis,
+                                          maxLines: 5,
+                                          strutStyle: StrutStyle(fontSize: 16.0),
+                                          text:
+                                          TextSpan(
+                                              text: titleList1_1[index],
+                                              style:
+                                              TextStyle(
+                                                color: Colors.black,
+                                                height: 1.4,
+                                                fontSize: 14.0,)
+                                          ),
+                                        )
+                                    ),
+                                  ],
+                                )
                             ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Container(
-                            width: 250,
-                            child: Text(
-                              infoList1_1[index],
+                            SizedBox(
+                              height: 20,
                             ),
-                          )
-                        ],
+                            Container(
+                              width: 250,
+                              child: Text(
+                                infoList1_3[index],
+                              ),
+                            )
+                          ],
 
-                    ),)
-                  ],
+                        ),)
+                    ],
+                  ),
                 ),
-              ),
-            );
-          })
+              );
+            })
     );
   }
 }
@@ -319,12 +337,30 @@ class shopDetail_2 extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              titleList1_2[index],
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.black,
-                              ),
+                            Container(
+                                width: 270,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Flexible(
+                                        child:
+                                        RichText(
+                                          overflow: TextOverflow.ellipsis,
+                                          maxLines: 5,
+                                          strutStyle: StrutStyle(fontSize: 16.0),
+                                          text:
+                                          TextSpan(
+                                              text: titleList1_2[index],
+                                              style:
+                                              TextStyle(
+                                                color: Colors.black,
+                                                height: 1.4,
+                                                fontSize: 14.0,)
+                                          ),
+                                        )
+                                    ),
+                                  ],
+                                )
                             ),
                             SizedBox(
                               height: 20,
@@ -377,13 +413,31 @@ class shopDetail_3 extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              titleList1_3[index],
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.black,
-                              ),
-                            ),
+                            Container(
+                            width: 270,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Flexible(
+                                    child:
+                                    RichText(
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 5,
+                                      strutStyle: StrutStyle(fontSize: 16.0),
+                                      text:
+                                      TextSpan(
+                                          text: titleList1_3[index],
+                                          style:
+                                          TextStyle(
+                                              color: Colors.black,
+                                              height: 1.4,
+                                              fontSize: 14.0,)
+                                      ),
+                                    )
+                                ),
+                              ],
+                            )
+                        ),
                             SizedBox(
                               height: 20,
                             ),
