@@ -1,9 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart'as http;
 import 'dart:convert';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
-
+Future<void> _launchInBrowser(String url) async {
+  if (await canLaunch(url)) {
+    await launch(
+      url,
+      forceSafariVC: false,
+      forceWebView: false,
+      headers: <String, String>{'my_header_key': 'my_header_value'},
+    );
+  } else {
+    throw '웹 호출 실패 $url';
+  }
+}
 
 void main() async{
   runApp(const MyApp());
