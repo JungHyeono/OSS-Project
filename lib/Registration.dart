@@ -131,6 +131,15 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
             },
           ),
         ),
+        Container(
+          child: RaisedButton(
+            onPressed:(){
+              Navigator.pop(
+                  context
+              );
+            },
+          ),
+        ),
       ]
     )
       ),
