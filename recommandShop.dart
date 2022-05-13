@@ -195,6 +195,14 @@ var infoList1_1=[
   "58,400"
 ];
 
+var url_List1_1=[
+  "https://www.coupang.com/vp/products/6131148033?itemId=11692926613&vendorItemId=78967251780&pickType=COU_PICK&q=%EC%B9%BC%EB%A1%9C%EB%B0%94%EC%9D%B4+%ED%8D%BC%ED%8E%99%ED%8A%B8+%ED%8C%8C%EC%9B%8C%EC%89%90%EC%9D%B4%ED%81%AC+%EC%95%84%EC%9D%B4%EC%86%94%EB%A0%88%EC%9D%B4%ED%8A%B8+%EC%B4%88%EC%BD%94%EB%A7%9B%2C+1890g%2C+1%EA%B0%9C&itemsCount=6&searchId=7510fee3fd2e4a15802eb29ed89a840b&rank=1&isAddedCart=",
+  "https://www.coupang.com/vp/products/8838078?itemId=9080897&vendorItemId=3280597288&q=%EC%8B%A0%ED%83%80-6+%ED%94%84%EB%A1%9C%ED%8B%B4+%ED%8C%8C%EC%9A%B0%EB%8D%94+%EB%93%9C%EB%A7%81%ED%81%AC+%EB%AF%B9%EC%8A%A4+%EB%8B%A8%EB%B0%B1%EC%A7%88+%EB%B3%B4%EC%B6%A9%EC%A0%9C%2C+%EC%B4%88%EC%BD%9C%EB%A6%BF&itemsCount=36&searchId=c80bf89230504486beb7c0dff92917fc&rank=3&isAddedCart=",
+  "https://www.coupang.com/vp/products/12849541?itemId=54093368&vendorItemId=72824366128&q=%EC%9B%90%EB%8D%B0%EC%9D%B4%EB%89%B4%ED%8A%B8%EB%A6%AC%EC%85%98+%EB%A8%B8%EC%8A%AC%ED%82%B9+80+%ED%94%84%EB%A1%9C%ED%8B%B4+%ED%97%AC%EC%8A%A4+%EB%B3%B4%EC%B6%A9%EC%A0%9C&itemsCount=31&searchId=26c56dfc8b97407da11357a19d08e7b4&rank=2&isAddedCart=",
+  "https://www.coupang.com/vp/products/19977043?itemId=3071491018&vendorItemId=4041827021&pickType=COU_PICK&q=%EB%A8%B8%EC%8A%AC%ED%8C%9C+%EC%BB%B4%EB%B1%83+%EC%9A%B8%ED%8A%B8%EB%9D%BC+%EC%9B%A8%EC%9D%B4+%ED%94%84%EB%A1%9C%ED%8B%B4+%ED%8C%8C%EC%9A%B0%EB%8D%94+%EB%93%9C%EB%A7%81%ED%81%AC+%EB%AF%B9%EC%8A%A4+%EB%8B%A8%EB%B0%B1%EC%A7%88+%EB%B3%B4%EC%B6%A9%EC%A0%9C&itemsCount=36&searchId=eca6913f434345d0b205d3914991d803&rank=1&isAddedCart=",
+  "https://www.coupang.com/vp/products/5547481294?itemId=8755227685&vendorItemId=76042171966&q=%5B%EC%BF%A0%ED%8C%A1%EC%88%98%EC%9E%85%5D+%EB%A8%B8%EC%8A%AC%ED%8C%9C+%EC%BB%B4%EB%B1%83+%EC%9B%A8%EC%9D%B4+%ED%94%84%EB%A1%9C%ED%8B%B4+%ED%8C%8C%EC%9A%B0%EB%8D%94+%EB%94%B8%EA%B8%B0%2C+2269g%2C&itemsCount=36&searchId=2ae9b4846b9c4907abf23b6eb44e0b7c&rank=1&isAddedCart=",
+];
+
 var titleList1_2=[
   "이고진 8320 스텝퍼, 블랙핑크, 1개",
   "맥슬리 말랑이 스텝퍼 에어쿠션 계단오르기 다이어트 유산소 운동기구, 블루",
@@ -218,6 +226,16 @@ var infoList1_2=[
   "259,000",
   "138,900"
 ];
+
+var url_List1_2=[
+  "https://www.coupang.com/vp/products/1079386660?itemId=328050720&vendorItemId=4123585502&pickType=COU_PICK&q=%EC%9D%B4%EA%B3%A0%EC%A7%84+8320+%EC%8A%A4%ED%85%9D%ED%8D%BC%2C+%EB%B8%94%EB%9E%99%ED%95%91%ED%81%AC%2C+1%EA%B0%9C&itemsCount=5&searchId=30b8736ef15344e3bc58205a981ec6be&rank=1&isAddedCart=",
+  "https://www.coupang.com/vp/products/6109662236?itemId=11506393946&vendorItemId=79447857370&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=3a625ccd-80e0-439b-83b5-92f293b5c088&korePlacement=15&koreSubPlacement=1&q=%EB%A7%A5%EC%8A%AC%EB%A6%AC+%EB%A7%90%EB%9E%91%EC%9D%B4+%EC%8A%A4%ED%85%9D%ED%8D%BC+%EC%97%90%EC%96%B4%EC%BF%A0%EC%85%98+%EA%B3%84%EB%8B%A8%EC%98%A4%EB%A5%B4%EA%B8%B0+%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8+%EC%9C%A0%EC%82%B0%EC%86%8C+%EC%9A%B4%EB%8F%99%EA%B8%B0%EA%B5%AC%2C+%EB%B8%94%EB%A3%A8&itemsCount=5&searchId=64928edb47ce4cbeab7374ea5fcb6a78&rank=0&isAddedCart=",
+  "https://www.coupang.com/vp/products/5547939691?itemId=8757617820&vendorItemId=76044546900&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=6bda0fd9-00ae-4b40-aa99-eeea5da3a1ca&korePlacement=15&koreSubPlacement=1&q=%ED%94%BC%ED%8B%B0%EC%A6%98+%EA%B0%80%EC%A0%95%EC%9A%A9+%EC%9C%A0%EC%82%B0%EC%86%8C+%EC%A0%84%EC%8B%A0%EC%9A%B4%EB%8F%99+%EB%A1%9C%EC%9E%89%EB%A8%B8%EC%8B%A0%2C+%EC%8B%A4%EB%B2%84&itemsCount=5&searchId=bc02a17dedd34ee49dc9c758d8676d1d&rank=0&isAddedCart=",
+  "https://www.coupang.com/vp/products/107524616?itemId=223657688&vendorItemId=3543192030&pickType=COU_PICK&q=%EB%A9%9C%ED%82%A8%EC%8A%A4%ED%8F%AC%EC%B8%A0+%EC%8A%A4%ED%95%80%EB%B0%94%EC%9D%B4%ED%81%AC+15kg+18kg&itemsCount=36&searchId=cfb2a8c6c9e74baea886d277bd52c0f0&rank=1&isAddedCart=",
+  "https://www.coupang.com/vp/products/261120257?itemId=816500447&vendorItemId=3216352170&pickType=COU_PICK&q=%EC%97%91%EC%82%AC%EC%9D%B4%EB%8D%94+%EC%A0%91%EC%9D%B4%EC%8B%9D+%EC%8B%A4%EB%82%B4%EC%9E%90%EC%A0%84%EA%B1%B0%2C+CF1000C%2C+%ED%99%94%EC%9D%B4%ED%8A%B8&itemsCount=11&searchId=8f7f6d773d124e84890fa78f721041f4&rank=1&isAddedCart="
+];
+
+
 
 var titleList1_3=[
   "순잠 타니 가정용 다용도 철봉 운동기구, 블랙",
@@ -268,6 +286,9 @@ class shopDetail_1 extends StatelessWidget {
             itemCount: titleList1_1.length,
             itemBuilder: (context, index){
               return GestureDetector(
+                onTap: (){
+                  _launchInBrowser(url_List1_1[index]);
+                },
                 child: Card(
                   child: Row(
                     children: [
@@ -344,6 +365,9 @@ class shopDetail_2 extends StatelessWidget {
             itemCount: titleList1_2.length,
             itemBuilder: (context, index){
               return GestureDetector(
+                onTap: (){
+                  _launchInBrowser(url_List1_2[index]);
+                },
                 child: Card(
                   child: Row(
                     children: [
