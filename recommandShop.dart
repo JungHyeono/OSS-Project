@@ -47,6 +47,23 @@ class recommandPd {
   }
 }
 
+class ProteinPowder {
+  int? id;
+  String? image;
+  String? title;
+  String? price;
+
+  ProteinPowder({this.id, this.image, this.title, this.price});
+
+  factory ProteinPowder.fromJson(Map<String, dynamic> parsedjson) {
+    return ProteinPowder(
+        id :parsedjson['id'],
+        image : parsedjson['image'],
+        title : parsedjson['title'],
+        price : parsedjson['price']);
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
