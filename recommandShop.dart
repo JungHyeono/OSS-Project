@@ -243,6 +243,14 @@ var infoList1_3=[
   "32,900"
 ];
 
+var url_List1_3=[
+  "https://www.coupang.com/vp/products/5547697822?itemId=8756619431&vendorItemId=81633294690&pickType=COU_PICK&q=%EC%88%9C%EC%9E%A0+%ED%83%80%EB%8B%88+%EA%B0%80%EC%A0%95%EC%9A%A9+%EB%8B%A4%EC%9A%A9%EB%8F%84+%EC%B2%A0%EB%B4%89+%EC%9A%B4%EB%8F%99%EA%B8%B0%EA%B5%AC%2C+%EB%B8%94%EB%9E%99&itemsCount=5&searchId=43a7ee7a761e46a8850abcf9b22f46d4&rank=1&isAddedCart=",
+    "https://www.coupang.com/vp/products/6273497429?itemId=12842897581&vendorItemId=80108449419&q=%EC%97%90%EC%9D%B4%EC%8A%A4%ED%8C%8C%EC%9B%8C+++%EC%9A%B4%EB%8F%99%EB%A7%A4%ED%8A%B8&itemsCount=7&searchId=6a50ee24e09542a1ae4320f50ea9b01b&rank=1&isAddedCart=",
+    "https://www.coupang.com/vp/products/181946062?itemId=521259038&vendorItemId=4347540818&q=%EB%B0%98%EC%84%9D%EC%8A%A4%ED%8F%AC%EC%B8%A0+%EB%B9%84%EC%8A%A4%ED%8E%99%ED%92%80%EC%97%85+%EC%B2%A0%EB%B4%89%2C+%EC%98%90%EB%A1%9C%EC%9A%B0&itemsCount=7&searchId=ab0e810dd40340a09b50d5365bfb028f&rank=1&isAddedCart=",
+    "https://www.coupang.com/vp/products/6169047890?itemId=12028816890&vendorItemId=79652405740&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=39b2694b-0dd5-4963-8e40-9c96408c2466&korePlacement=15&koreSubPlacement=1&q=%ED%8A%B8%EC%9C%88%EB%B8%8C%EB%A1%9C+%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84+%ED%8A%B8%EC%9C%88%EC%88%98%ED%8F%89+%EB%AC%B8%ED%8B%80%EC%B2%A0%EB%B4%89+%EA%B0%80%EC%A0%95%EC%9A%A9+%ED%84%B1%EA%B1%B8%EC%9D%B4+%EC%9A%B4%EB%8F%99%EA%B8%B0%EA%B5%AC+%ED%92%80%EC%97%85%EB%B0%94&itemsCount=6&searchId=71db9dbc7a1343fd96f14fa01a3f2e3d&rank=0&isAddedCart=",
+    "https://www.coupang.com/vp/products/6356322906?itemId=13397776186&vendorItemId=79927428047&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=e9f31bac-822b-4bfb-90c7-9b4682162e8c&korePlacement=15&koreSubPlacement=1&q=%ED%99%88%ED%8A%B8%ED%95%8F+%EA%B0%80%EC%A0%95%EC%9A%A9+2%EC%A4%91%EC%9E%A0%EA%B8%88+%EB%AC%B8%ED%8B%80%EC%B2%A0%EB%B4%89+%EC%88%98%ED%8F%89%EA%B3%84+%EB%B8%94%EB%9E%99%2C+%ED%98%BC%ED%95%A9+%EC%83%89%EC%83%81&itemsCount=2&searchId=c8ac15de44214796915fe16d014941c4&rank=0&isAddedCart=",
+];
+
 class shopDetail_1 extends StatelessWidget {
   const shopDetail_1({Key? key}) : super(key: key);
 
@@ -412,6 +420,9 @@ class shopDetail_3 extends StatelessWidget {
             itemCount: titleList1_3.length,
             itemBuilder: (context, index){
               return GestureDetector(
+                onTap: (){
+                  _launchInBrowser(url_List1_3[index]);
+                },
                 child: Card(
                   child: Row(
                     children: [
