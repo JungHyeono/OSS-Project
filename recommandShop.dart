@@ -21,6 +21,31 @@ Future<recommandPd> fetchRecommandPd() async{
   }
 }
 
+class recommandPd {
+  List<ProteinPowder>? proteinPowder;
+  List<Aerobic>? aerobic;
+  List<Weight>? weight;
+
+  recommandPd({this.proteinPowder, this.aerobic, this.weight});
+
+  factory recommandPd.fromJson(Map<String, dynamic> parsedjson) {
+
+    var list1=parsedjson['proteinPowder'] as List;
+    var list2=parsedjson['aerobic'] as List;
+    var list3=parsedjson['weight'] as List;
+
+    List<ProteinPowder> proteinPowderList = list1.map((e) => ProteinPowder.fromJson(e)).toList();
+    List<Aerobic> aerobicList = list2.map((f) => Aerobic.fromJson(f)).toList();
+    List<Weight> weightList = list3.map((g) => Weight.fromJson(g)).toList();
+
+
+    return recommandPd(
+      proteinPowder: proteinPowderList,
+      aerobic: aerobicList,
+      weight: weightList
+    );
+  }
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
