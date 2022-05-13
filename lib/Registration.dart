@@ -28,13 +28,14 @@ class Rabbitcal_registration extends StatefulWidget {
 }
 
 class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
-  String Weight="";
-  String Height="";
-  String Right_arm_muscle="";
-  String Left_arm_muscle="";
-  String Right_leg_muscle="";
-  String Left_leg_muscle="";
-  String Body_fat="";
+  double Weight=0;
+  double Height=0;
+  double Right_arm_muscle=0;
+  double Left_arm_muscle=0;
+  double Right_leg_muscle=0;
+  double Left_leg_muscle=0;
+  double Body_fat=0;
+
 
   @override
   Widget build(BuildContext context) {
@@ -51,66 +52,74 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
     child:Column(
       children:<Widget>[
 
-    Container(
-    width:500,height:70,
-    child: TextField(
-    style: TextStyle(fontSize:22),
-    textAlign:TextAlign.center,
-    decoration: InputDecoration(hintText:'몸무게'),
-    onChanged: (String value){
-    Weight =value;
-    },
-    ),),
+        Container(
+          width:500,height:70,
+          child: TextField(
+            style: TextStyle(fontSize:22),
+            textAlign:TextAlign.center,
+            decoration: InputDecoration(hintText:'몸무게'),
+            onChanged: (value){
+              Weight =double.parse(value);
+            },
+          ),
+        ),
+
         Container(
           width:500,height:70,
           child: TextField(
             style: TextStyle(fontSize:22),
             textAlign:TextAlign.center,
             decoration: InputDecoration(hintText:'키'),
-            onChanged: (String value){
-              Height =value;
+            onChanged: (value){
+              Height=double.parse(value);
             },
-          ),),
+          ),
+        ),
         Container(
           width:500,height:70,
           child: TextField(
             style: TextStyle(fontSize:22),
             textAlign:TextAlign.center,
             decoration: InputDecoration(hintText:'오른팔 근육량'),
-            onChanged: (String value){
-              Right_arm_muscle =value;
+            onChanged: (value){
+              Right_arm_muscle=double.parse(value);
             },
-          ),),
+          ),
+        ),
+
         Container(
           width:500,height:70,
           child: TextField(
             style: TextStyle(fontSize:22),
             textAlign:TextAlign.center,
             decoration: InputDecoration(hintText:'왼팔 근육량'),
-            onChanged: (String value){
-              Left_arm_muscle =value;
+            onChanged: (value){
+              Left_arm_muscle =double.parse(value);
             },
-          ),),
+          ),
+        ),
         Container(
           width:500,height:70,
           child: TextField(
             style: TextStyle(fontSize:22),
             textAlign:TextAlign.center,
-            decoration: InputDecoration(hintText:'오른다리 근육량'),
-            onChanged: (String value){
-              Right_leg_muscle =value;
+            decoration: InputDecoration(hintText:'오른 다리 근육량'),
+            onChanged: (value){
+              Right_leg_muscle =double.parse(value);
             },
-          ),),
+          ),
+        ),
         Container(
           width:500,height:70,
           child: TextField(
             style: TextStyle(fontSize:22),
             textAlign:TextAlign.center,
-            decoration: InputDecoration(hintText:'왼다리 근육량'),
-            onChanged: (String value){
-              Left_leg_muscle =value;
+            decoration: InputDecoration(hintText:'왼 다리 근육량'),
+            onChanged: (value){
+              Left_leg_muscle =double.parse(value);
             },
-          ),),
+          ),
+        ),
         Container(
           width:500,height:70,
           child: TextField(
@@ -118,9 +127,10 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
             textAlign:TextAlign.center,
             decoration: InputDecoration(hintText:'체지방'),
             onChanged: (String value){
-              Body_fat=value;
+              Body_fat=double.parse(value);
             },
-          ),),
+          ),
+        ),
       ]
     )
       ),
