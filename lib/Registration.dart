@@ -70,6 +70,21 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
             },
           ),
         ),
+        ListTile(
+          title: const Text('여자'),
+          leading: Radio<person>(
+            value: person.female,
+            groupValue:_human,
+            onChanged:(person? value)
+            {
+              setState(()
+              {
+                _human=value;
+              }
+              );
+            },
+          ),
+        ),
 
         Container(
           width:500,height:70,
