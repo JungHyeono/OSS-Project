@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Rabbitcal App',
       theme: ThemeData(
         primarySwatch: Colors.green,
@@ -37,10 +38,14 @@ class Rabbitcalmain extends StatelessWidget {
           margin:EdgeInsets.all(10),
           child: Column(
               children:<Widget>[
-                Container(
-                    child: Image.asset('assets/rabbitcal.jpg',width:300,height:300)
+                CircleAvatar(
+                  backgroundImage:AssetImage('assets/rabbitcal.jpg'),
+                  radius: 150.0,
                 ),
 
+                SizedBox(
+                  height:60,
+                ),
                 Container(
                   width:250,height:80,
                   padding: EdgeInsets.all(10),
