@@ -20,6 +20,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+enum person {male,female}
+
 class Rabbitcal_registration extends StatefulWidget {
   const Rabbitcal_registration({Key? key}) : super(key: key);
 
@@ -28,6 +30,8 @@ class Rabbitcal_registration extends StatefulWidget {
 }
 
 class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
+  person? _human =person.male;
+
   double Weight=0;
   double Height=0;
   double Right_arm_muscle=0;
@@ -51,6 +55,21 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
       body:Center(
     child:Column(
       children:<Widget>[
+
+        ListTile(
+          leading: Radio<person>(
+            value: person.male,
+            groupValue:_human,
+            onChanged:(person? value)
+            {
+              setState(()
+              {
+                _human=value;
+              }
+              );
+            },
+          ),
+        ),
 
         Container(
           width:500,height:70,
