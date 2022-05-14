@@ -1,5 +1,5 @@
 # OSS-Project
-This branch only used for modify feature of checkEveryday.
+This branch only used for modify feature of checkEveryday, crawling,recommandShop.
 DO NOT MODIFY FEATURE IF YOU WANT TO MODIFY OTHER FEATURE.(ONLY FOR MODIFY FEATURE EVERYDAY)
 
 
@@ -9,6 +9,8 @@ pubspec.yaml에 다음을 추가하세요.
   url launcher: ^5.7.10
   shared preferences: ^2.0.13
   intl: ^0.17.0  
-  
+
+이 코드는 beautifulsoup4를 사용합니다.
+
 ## 브랜치 생성자
 juhojang@hotmail.com(충북대학교, 박주호)
