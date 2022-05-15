@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'second.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -32,7 +34,20 @@ class Rabbitcalmain extends StatelessWidget {
         ),
         centerTitle:true,
       ),
-      body: Center(
+  actions:<Widget>[
+          TextButton(
+            child:Text('로그아웃',
+                style:TextStyle(
+                  color:Colors.white,
+                )
+            ),
+            onPressed: (){
+            },
+          ),
+        ],
+      ),
+
+        body: Center(
         child: Container(
           padding: EdgeInsets.all(10),
           margin:EdgeInsets.all(10),
@@ -42,7 +57,6 @@ class Rabbitcalmain extends StatelessWidget {
                   backgroundImage:AssetImage('assets/rabbitcal.jpg'),
                   radius: 150.0,
                 ),
-
                 SizedBox(
                   height:60,
                 ),
@@ -51,15 +65,17 @@ class Rabbitcalmain extends StatelessWidget {
                   padding: EdgeInsets.all(10),
                   margin:EdgeInsets.all(10),
                   child: RaisedButton(
-                      child: Text('인바디 등록',style:TextStyle(
-                        fontWeight:FontWeight.bold,
-                        fontSize: 30,
-                      ),),
+                      child: Text('인바디 등록',
+                        style:TextStyle(
+                          fontWeight:FontWeight.bold,
+                          fontSize: 30,
+                        ),
+                      ),
                       color:Colors.white,
-                      onPressed: () {
+                      onPressed: (){
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder:(context)=>Rabbitcal_regitstraion())
+                            MaterialPageRoute(builder:(context)=>Rabbitcal_regitstraion(),)
                         );
                       },
                       shape: RoundedRectangleBorder(
@@ -77,12 +93,7 @@ class Rabbitcalmain extends StatelessWidget {
                         fontSize: 30,
                       ),),
                       color:Colors.white,
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder:(context)=>Rabbitcal_Recommendation())
-                        );
-                      },
+                      onPressed: () {  },
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       )
