@@ -156,21 +156,34 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                     },
                   ),
                 ),
-      Builder(
-           builder: (ctx) {
-              return Container(
-               width:200,
-              child: RaisedButton(
-                  child: Text('확인',
-              style:TextStyle(
-                 fontWeight: FontWeight.bold,
-                   fontSize:30,
-               ) ,
-                ) ,
-              onPressed:(){},
+                Builder(
+                    builder: (ctx) {
+                      return Container(
+                        width:200,
+                        child: RaisedButton(
+                          child: Text('확인',
+                            style:TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize:30,
+                            ) ,
+                          ) ,
+                          onPressed:(){
+                            Scaffold.of(ctx).showSnackBar(SnackBar(
+                              content:Text('등록 완료!',
+                                  style:TextStyle(
+                                      color:Colors.white
+                                  )
+                              ),
+                            );
+                          },
+                        ),
+                      );
+                    }
                 ),
               ]
           ),
           )
       ),
     );
+  }
+}
