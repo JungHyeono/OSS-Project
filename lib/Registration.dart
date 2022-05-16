@@ -1,32 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-
-    return MaterialApp(
-      title: 'Rabbitcal App',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: Rabbitcal_registration(),
-    );
-  }
-}
-
 enum person {male,female}
 
-class Rabbitcal_registration extends StatefulWidget {
-  const Rabbitcal_registration({Key? key}) : super(key: key);
+class Rabbitcal_regitstraion extends StatefulWidget {
+  const Rabbitcal_regitstraion({Key? key}) : super(key: key);
 
   @override
-  State<Rabbitcal_registration> createState() => _Rabbitcal_registrationState();
+  State<Rabbitcal_regitstraion> createState() => _Rabbitcal_regitstraionState();
+
 }
 
 class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
@@ -52,119 +33,129 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
         ),
         centerTitle: true,
       ),
+      
       body:Center(
-    child:Column(
-      children:<Widget>[
+          child:SingleChildScrollView
+            (child: ListBody(
+              children:<Widget>[
+                ListTile(
+                  title: const Text('남자'),
+                  leading: Radio<person>(
+                    value: person.male,
+                    groupValue:_human,
+                    onChanged:(person? value)
+                    {
+                      setState(()
+                      {
+                        _human=value;
+                      }
+                      );
+                    },
+                  ),
+                ),
+                ListTile(
+                  title: const Text('여자'),
+                  leading: Radio<person>(
+                    value: person.female,
+                    groupValue:_human,
+                    onChanged:(person? value)
+                    {
+                      setState(()
+                      {
+                        _human=value;
+                      }
+                      );
+                    },
+                  ),
+                ),
 
-        ListTile(
-          leading: Radio<person>(
-            value: person.male,
-            groupValue:_human,
-            onChanged:(person? value)
-            {
-              setState(()
-              {
-                _human=value;
-              }
-              );
-            },
-          ),
-        ),
-        ListTile(
-          title: const Text('여자'),
-          leading: Radio<person>(
-            value: person.female,
-            groupValue:_human,
-            onChanged:(person? value)
-            {
-              setState(()
-              {
-                _human=value;
-              }
-              );
-            },
-          ),
-        ),
+                Container(
+                  width:500,height:70,
+                  child: TextField(
+                    style: TextStyle(fontSize:22),
+                    textAlign:TextAlign.center,
+                    decoration: InputDecoration(labelText:'몸무게'),
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value){
+                      Weight =double.parse(value);
+                    },
+                  ),
+                ),
 
-        Container(
-          width:500,height:70,
-          child: TextField(
-            style: TextStyle(fontSize:22),
-            textAlign:TextAlign.center,
-            decoration: InputDecoration(hintText:'몸무게'),
-            onChanged: (value){
-              Weight =double.parse(value);
-            },
-          ),
-        ),
+                Container(
+                  width:500,height:70,
+                  child: TextField(
+                    style: TextStyle(fontSize:22),
+                    textAlign:TextAlign.center,
+                    decoration: InputDecoration(labelText:'키'),
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value){
+                      Height =double.parse(value);
+                    },
+                  ),
+                ),
 
-        Container(
-          width:500,height:70,
-          child: TextField(
-            style: TextStyle(fontSize:22),
-            textAlign:TextAlign.center,
-            decoration: InputDecoration(hintText:'키'),
-            onChanged: (value){
-              Height=double.parse(value);
-            },
-          ),
-        ),
-        Container(
-          width:500,height:70,
-          child: TextField(
-            style: TextStyle(fontSize:22),
-            textAlign:TextAlign.center,
-            decoration: InputDecoration(hintText:'오른팔 근육량'),
-            onChanged: (value){
-              Right_arm_muscle=double.parse(value);
-            },
-          ),
-        ),
+                Container(
+                  width:500,height:70,
+                  child: TextField(
+                    style: TextStyle(fontSize:22),
+                    textAlign:TextAlign.center,
+                    decoration: InputDecoration(labelText:'오른팔 근육량'),
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value){
+                      Right_arm_muscle =double.parse(value);
+                    },
+                  ),
+                ),
 
-        Container(
-          width:500,height:70,
-          child: TextField(
-            style: TextStyle(fontSize:22),
-            textAlign:TextAlign.center,
-            decoration: InputDecoration(hintText:'왼팔 근육량'),
-            onChanged: (value){
-              Left_arm_muscle =double.parse(value);
-            },
-          ),
-        ),
-        Container(
-          width:500,height:70,
-          child: TextField(
-            style: TextStyle(fontSize:22),
-            textAlign:TextAlign.center,
-            decoration: InputDecoration(hintText:'오른 다리 근육량'),
-            onChanged: (value){
-              Right_leg_muscle =double.parse(value);
-            },
-          ),
-        ),
-        Container(
-          width:500,height:70,
-          child: TextField(
-            style: TextStyle(fontSize:22),
-            textAlign:TextAlign.center,
-            decoration: InputDecoration(hintText:'왼 다리 근육량'),
-            onChanged: (value){
-              Left_leg_muscle =double.parse(value);
-            },
-          ),
-        ),
-        Container(
-          width:500,height:70,
-          child: TextField(
-            style: TextStyle(fontSize:22),
-            textAlign:TextAlign.center,
-            decoration: InputDecoration(hintText:'체지방'),
-            onChanged: (String value){
-              Body_fat=double.parse(value);
-            },
-          ),
-        ),
+                Container(
+                  width:500,height:70,
+                  child: TextField(
+                    style: TextStyle(fontSize:22),
+                    textAlign:TextAlign.center,
+                    decoration: InputDecoration(labelText:'왼팔 근육량'),
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value){
+                      Left_arm_muscle =double.parse(value);
+                    },
+                  ),
+                ),
+                Container(
+                  width:500,height:70,
+                  child: TextField(
+                    style: TextStyle(fontSize:22),
+                    textAlign:TextAlign.center,
+                    decoration: InputDecoration(labelText:'오른 다리 근육량'),
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value){
+                      Right_leg_muscle =double.parse(value);
+                    },
+                  ),
+                ),
+                Container(
+                  width:500,height:70,
+                  child: TextField(
+                    style: TextStyle(fontSize:22),
+                    textAlign:TextAlign.center,
+                    decoration: InputDecoration(labelText:'왼 다리 근육량'),
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value){
+                      Right_leg_muscle =double.parse(value);
+                    },
+                  ),
+                ),
+                Container(
+                  width:500,height:70,
+                  child: TextField(
+                    style: TextStyle(fontSize:22),
+                    textAlign:TextAlign.center,
+                    decoration: InputDecoration(labelText:'체지방'),
+                    textInputAction:TextInputAction.next,
+                    onChanged: (String value){
+                      Body_fat=double.parse(value);
+                    },
+                  ),
+                ),
         Container(
           child: RaisedButton(
             onPressed:(){
@@ -174,9 +165,9 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
             },
           ),
         ),
-      ]
-    )
+                ),
+              ]
+          ),
+          )
       ),
     );
-  }
-}
