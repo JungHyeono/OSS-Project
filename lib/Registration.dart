@@ -170,10 +170,14 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                           onPressed:(){
                             Scaffold.of(ctx).showSnackBar(SnackBar(
                               content:Text('등록 완료!',
+                                  textAlign: TextAlign.center,
                                   style:TextStyle(
                                       color:Colors.white
                                   )
                               ),
+                              backgroundColor: Colors.teal,
+                              duration:Duration(milliseconds:1000),
+                            ),
                             );
                           },
                         ),
