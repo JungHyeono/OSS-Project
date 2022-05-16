@@ -156,15 +156,18 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                     },
                   ),
                 ),
-        Container(
-          child: RaisedButton(
-            onPressed:(){
-              Navigator.pop(
-                  context
-              );
-            },
-          ),
-        ),
+      Builder(
+           builder: (ctx) {
+              return Container(
+               width:200,
+              child: RaisedButton(
+                  child: Text('확인',
+              style:TextStyle(
+                 fontWeight: FontWeight.bold,
+                   fontSize:30,
+               ) ,
+                ) ,
+              onPressed:(){},
                 ),
               ]
           ),
