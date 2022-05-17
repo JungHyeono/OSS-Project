@@ -13,6 +13,9 @@ class Rabbitcal_regitstraion extends StatefulWidget {
 class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
   person? _human =person.male;
 
+  final _valueList=['저체중 강인형','표준체중 강인형','과체중 강인형'];
+  var _selectedvalue='저체중 강인형';
+
   double Weight=0;
   double Height=0;
   double Right_arm_muscle=0;
@@ -67,6 +70,10 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                       );
                     },
                   ),
+                ),
+
+                DropdownButton(
+                  onChanged:(){};
                 ),
 
                 Container(
