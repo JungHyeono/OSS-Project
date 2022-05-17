@@ -9,9 +9,8 @@ class Rabbitcal_regitstraion extends StatefulWidget {
   State<Rabbitcal_regitstraion> createState() => _Rabbitcal_regitstraionState();
 
 }
-
-class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
-  person? _human =person.male;
+class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
+  person? _human =person.male;//_human에 성별들어감
 
   final _valueList=['저체중 강인형','표준체중 강인형','과체중 강인형'];
   var _selectedvalue='저체중 강인형';
@@ -24,7 +23,6 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
   double Left_leg_muscle=0;
   double Body_fat=0;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +34,7 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
         ),
         centerTitle: true,
       ),
-      
+
       body:Center(
           child:SingleChildScrollView
             (child: ListBody(
@@ -73,7 +71,22 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                 ),
 
                 DropdownButton(
-                  onChanged:(){};
+
+                  value: _selectedvalue,
+                  items:_valueList.map((String item){
+                    return DropdownMenuItem<String>(
+                      child:Text('$item'),
+                      value:item,
+                    );
+                  },
+                  ).toList(),
+                  onChanged:(dynamic value){
+                    setState(()
+                    {
+                      _selectedvalue=value;
+                    }
+                    );
+                  },
                 ),
 
                 Container(
@@ -90,7 +103,7 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                 ),
 
                 Container(
-                  width:500,height:70,
+                  width:250,height:70,
                   child: TextField(
                     style: TextStyle(fontSize:22),
                     textAlign:TextAlign.center,
@@ -103,7 +116,7 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                 ),
 
                 Container(
-                  width:500,height:70,
+                  width:250,height:70,
                   child: TextField(
                     style: TextStyle(fontSize:22),
                     textAlign:TextAlign.center,
@@ -116,7 +129,7 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                 ),
 
                 Container(
-                  width:500,height:70,
+                  width:250,height:70,
                   child: TextField(
                     style: TextStyle(fontSize:22),
                     textAlign:TextAlign.center,
@@ -128,7 +141,7 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                   ),
                 ),
                 Container(
-                  width:500,height:70,
+                  width:250,height:70,
                   child: TextField(
                     style: TextStyle(fontSize:22),
                     textAlign:TextAlign.center,
@@ -140,7 +153,7 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                   ),
                 ),
                 Container(
-                  width:500,height:70,
+                  width:250,height:70,
                   child: TextField(
                     style: TextStyle(fontSize:22),
                     textAlign:TextAlign.center,
@@ -152,7 +165,7 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                   ),
                 ),
                 Container(
-                  width:500,height:70,
+                  width:250,height:70,
                   child: TextField(
                     style: TextStyle(fontSize:22),
                     textAlign:TextAlign.center,
@@ -166,7 +179,7 @@ class _Rabbitcal_registrationState extends State<Rabbitcal_registration> {
                 Builder(
                     builder: (ctx) {
                       return Container(
-                        width:200,
+                        width:100,
                         child: RaisedButton(
                           child: Text('확인',
                             style:TextStyle(
