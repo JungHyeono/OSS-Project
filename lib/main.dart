@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'second.dart';
+import 'Registration.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,14 +27,15 @@ class Rabbitcalmain extends StatelessWidget {
   Widget build(BuildContext context){
     return Scaffold(
       appBar:AppBar(
-        title:Text('Rabbitcal',style:TextStyle(
-          fontWeight:FontWeight.bold,
-          fontSize: 40,
-        ),
+        title:Text('Rabbitcal',
+          style:TextStyle(
+            fontWeight:FontWeight.bold,
+            fontSize: 40,
+          ),
         ),
         centerTitle:true,
-      ),
-  actions:<Widget>[
+
+        actions:<Widget>[
           TextButton(
             child:Text('로그아웃',
                 style:TextStyle(
@@ -42,12 +43,14 @@ class Rabbitcalmain extends StatelessWidget {
                 )
             ),
             onPressed: (){
+              print('Logout Button is clicked');
+              //로그인 페이지 이동
             },
           ),
         ],
       ),
 
-        body: Center(
+      body: Center(
         child: Container(
           padding: EdgeInsets.all(10),
           margin:EdgeInsets.all(10),
@@ -55,13 +58,10 @@ class Rabbitcalmain extends StatelessWidget {
               children:<Widget>[
                 CircleAvatar(
                   backgroundImage:AssetImage('assets/rabbitcal.jpg'),
-                  radius: 150.0,
-                ),
-                SizedBox(
-                  height:60,
+                  radius: 100.0,
                 ),
                 Container(
-                  width:250,height:80,
+                  width:250,height:70,
                   padding: EdgeInsets.all(10),
                   margin:EdgeInsets.all(10),
                   child: RaisedButton(
@@ -84,7 +84,7 @@ class Rabbitcalmain extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width:250,height:80,
+                  width:250,height:70,
                   padding: EdgeInsets.all(10),
                   margin:EdgeInsets.all(10),
                   child: RaisedButton(
@@ -93,10 +93,29 @@ class Rabbitcalmain extends StatelessWidget {
                         fontSize: 30,
                       ),),
                       color:Colors.white,
-                      onPressed: () {  },
+                      onPressed: () { //운동추천페이지 이동
+                         },
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       )
+                  ),
+                ),
+
+                Container(
+                  width:250,height:70,
+                  padding: EdgeInsets.all(10),
+                  margin:EdgeInsets.all(10),
+                  child: RaisedButton(
+                      child: Text('운동기구 추천',style:TextStyle(
+                        fontWeight:FontWeight.bold,
+                        fontSize: 30,
+                      ),),
+                      color:Colors.white,
+                      onPressed: () { //운동 기구 추천 페이지 이동
+                         },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                   ),
                 ),
               ]
