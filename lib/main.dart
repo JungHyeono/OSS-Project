@@ -49,6 +49,25 @@ class Rabbitcalmain extends StatelessWidget {
           ),
         ],
       ),
+      drawer:Drawer(
+        child: ListView(
+          padding:EdgeInsets.zero,
+          children:<Widget>[
+            UserAccountsDrawerHeader(
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage('rabbitcal.jpg'),
+                ),
+
+                accountEmail:Text('kimjunho1231@naver.com'),
+                accountName: Text('김준호'),
+              
+                decoration:BoxDecoration(
+                    color:Colors.red,
+                )
+            ),
+          ],
+        ),
+      ),
 
       body: Center(
         child: Container(
