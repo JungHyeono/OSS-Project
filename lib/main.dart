@@ -34,20 +34,6 @@ class Rabbitcalmain extends StatelessWidget {
           ),
         ),
         centerTitle:true,
-
-        actions:<Widget>[
-          TextButton(
-            child:Text('로그아웃',
-                style:TextStyle(
-                  color:Colors.white,
-                )
-            ),
-            onPressed: (){
-              print('Logout Button is clicked');
-              //로그인 페이지 이동
-            },
-          ),
-        ],
       ),
       drawer:Drawer(
         child: ListView(
@@ -60,10 +46,23 @@ class Rabbitcalmain extends StatelessWidget {
 
                 accountEmail:Text('kimjunho1231@naver.com'),
                 accountName: Text('김준호'),
-              
+
                 decoration:BoxDecoration(
                     color:Colors.red,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft:Radius.circular(40.0),
+                      bottomRight:Radius.circular(40.0),
+                    )
                 )
+            ),
+            ListTile(
+              leading: Icon(Icons.home,
+                  color: Colors.grey[850]),
+              title: Text('출석 체크'),
+              onTap:(){
+                print('출석체크');
+              },
+              trailing:Icon(Icons.check),
             ),
           ],
         ),
