@@ -12,7 +12,12 @@ class Rabbitcal_regitstraion extends StatefulWidget {
 class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   person? _human =person.male;//_human에 성별들어감
   final _formKey=GlobalKey<FormState>();
-
+  final _formKey2=GlobalKey<FormState>();
+  final _formKey3=GlobalKey<FormState>();
+  final _formKey4=GlobalKey<FormState>();
+  final _formKey5=GlobalKey<FormState>();
+  final _formKey6=GlobalKey<FormState>();
+  final _formKey7=GlobalKey<FormState>();
   final _valueList=['저체중 강인형','표준체중 강인형','과체중 강인형'];
   var _selectedvalue='저체중 강인형';
 
@@ -114,78 +119,150 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                   ),
                 ),
 
-                Container(
-                  width:250,height:70,
-                  child: TextField(
-                    style: TextStyle(fontSize:22),
-                    textAlign:TextAlign.center,
-                    decoration: InputDecoration(labelText:'키'),
-                    textInputAction: TextInputAction.next,
-                    onChanged: (value){
-                      Height =double.parse(value);
-                    },
+                Form(
+                  key:_formKey2,
+                  child: Container(
+                    width:500,height:70,
+                    child: TextFormField(
+                      validator:(value)
+                      {
+                        if(value==null||value.isEmpty)
+                        {
+                          return '정보를 입력하세요.';
+                        }
+                        return null;
+                      },
+
+                      style: TextStyle(fontSize:22),
+                      textAlign:TextAlign.center,
+                      decoration: InputDecoration(labelText:'키'),
+                      textInputAction: TextInputAction.next,
+                      onChanged: (value){
+                        Height =double.parse(value);
+                      },
+                    ),
                   ),
                 ),
 
-                Container(
-                  width:250,height:70,
-                  child: TextField(
-                    style: TextStyle(fontSize:22),
-                    textAlign:TextAlign.center,
-                    decoration: InputDecoration(labelText:'오른팔 근육량'),
-                    textInputAction: TextInputAction.next,
-                    onChanged: (value){
-                      Right_arm_muscle =double.parse(value);
-                    },
+                Form(
+                  key:_formKey3,
+                  child: Container(
+                    width:500,height:70,
+                    child: TextFormField(
+                      validator:(value)
+                      {
+                        if(value==null||value.isEmpty)
+                        {
+                          return '정보를 입력하세요.';
+                        }
+                        return null;
+                      },
+
+                      style: TextStyle(fontSize:22),
+                      textAlign:TextAlign.center,
+                      decoration: InputDecoration(labelText:'오른 팔 근육량'),
+                      textInputAction: TextInputAction.next,
+                      onChanged: (value){
+                        Right_arm_muscle =double.parse(value);
+                      },
+                    ),
                   ),
                 ),
 
-                Container(
-                  width:250,height:70,
-                  child: TextField(
-                    style: TextStyle(fontSize:22),
-                    textAlign:TextAlign.center,
-                    decoration: InputDecoration(labelText:'왼팔 근육량'),
-                    textInputAction: TextInputAction.next,
-                    onChanged: (value){
-                      Left_arm_muscle =double.parse(value);
-                    },
+                Form(
+                  key:_formKey4,
+                  child: Container(
+                    width:500,height:70,
+                    child: TextFormField(
+                      validator:(value)
+                      {
+                        if(value==null||value.isEmpty)
+                        {
+                          return '정보를 입력하세요.';
+                        }
+                        return null;
+                      },
+
+                      style: TextStyle(fontSize:22),
+                      textAlign:TextAlign.center,
+                      decoration: InputDecoration(labelText:'왼 팔 근육량'),
+                      textInputAction: TextInputAction.next,
+                      onChanged: (value){
+                        Left_arm_muscle =double.parse(value);
+                      },
+                    ),
                   ),
                 ),
-                Container(
-                  width:250,height:70,
-                  child: TextField(
-                    style: TextStyle(fontSize:22),
-                    textAlign:TextAlign.center,
-                    decoration: InputDecoration(labelText:'오른 다리 근육량'),
-                    textInputAction: TextInputAction.next,
-                    onChanged: (value){
-                      Right_leg_muscle =double.parse(value);
-                    },
+                Form(
+                  key:_formKey5,
+                  child: Container(
+                    width:500,height:70,
+                    child: TextFormField(
+                      validator:(value)
+                      {
+                        if(value==null||value.isEmpty)
+                        {
+                          return '정보를 입력하세요.';
+                        }
+                        return null;
+                      },
+
+                      style: TextStyle(fontSize:22),
+                      textAlign:TextAlign.center,
+                      decoration: InputDecoration(labelText:'오른 다리 근육량'),
+                      textInputAction: TextInputAction.next,
+                      onChanged: (value){
+                        Right_leg_muscle =double.parse(value);
+                      },
+                    ),
                   ),
                 ),
-                Container(
-                  width:250,height:70,
-                  child: TextField(
-                    style: TextStyle(fontSize:22),
-                    textAlign:TextAlign.center,
-                    decoration: InputDecoration(labelText:'왼 다리 근육량'),
-                    textInputAction: TextInputAction.next,
-                    onChanged: (value){
-                      Right_leg_muscle =double.parse(value);
-                    },
+                Form(
+                  key:_formKey6,
+                  child: Container(
+                    width:500,height:70,
+                    child: TextFormField(
+                      validator:(value)
+                      {
+                        if(value==null||value.isEmpty)
+                        {
+                          return '정보를 입력하세요.';
+                        }
+                        return null;
+                      },
+
+                      style: TextStyle(fontSize:22),
+                      textAlign:TextAlign.center,
+                      decoration: InputDecoration(labelText:'왼 다리 근육량'),
+                      textInputAction: TextInputAction.next,
+                      onChanged: (value){
+                        Left_leg_muscle =double.parse(value);
+                      },
+                    ),
                   ),
                 ),
-                Container(
-                  width:250,height:70,
-                  child: TextField(
-                    style: TextStyle(fontSize:22),
-                    textAlign:TextAlign.center,
-                    decoration: InputDecoration(labelText:'체지방'),
-                    textInputAction:TextInputAction.next,
-                    onChanged: (String value){
-                      Body_fat=double.parse(value);
-                    },
+                Form(
+                  key:_formKey7,
+                  child: Container(
+                    width:500,height:70,
+                    child: TextFormField(
+                      validator:(value)
+                      {
+                        if(value==null||value.isEmpty)
+                        {
+                          return '정보를 입력하세요.';
+                        }
+                        return null;
+                      },
+
+                      style: TextStyle(fontSize:22),
+                      textAlign:TextAlign.center,
+                      decoration: InputDecoration(labelText:'체지방량'),
+                      textInputAction: TextInputAction.next,
+                      onChanged: (value){
+                        Body_fat =double.parse(value);
+                      },
+                    ),
                   ),
                 ),
                 Builder(
@@ -199,19 +276,20 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                               fontSize:30,
                             ) ,
                           ) ,
-    onPressed:(){
-    if(_formKey.currentState!.validate())
-    Scaffold.of(ctx).showSnackBar(SnackBar(
-                              content:Text('등록 완료!',
-                                  textAlign: TextAlign.center,
-                                  style:TextStyle(
-                                      color:Colors.white
-                                  )
+                          onPressed:(){
+                            if(_formKey.currentState!.validate()||_formKey2.currentState!.validate()||_formKey3.currentState!.validate()||_formKey4.currentState!.validate()||_formKey5.currentState!.validate()||_formKey6.currentState!.validate()||_formKey7.currentState!.validate()){
+                              Scaffold.of(ctx).showSnackBar(SnackBar(
+                                content:Text('등록 완료!',
+                                    textAlign: TextAlign.center,
+                                    style:TextStyle(
+                                        color:Colors.white
+                                    )
+                                ),
+                                backgroundColor: Colors.teal,
+                                duration:Duration(milliseconds:1000),
                               ),
-                              backgroundColor: Colors.teal,
-                              duration:Duration(milliseconds:1000),
-                            ),
-                            );
+                              );
+                            }
                           },
                         ),
                       );
