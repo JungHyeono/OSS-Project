@@ -11,6 +11,7 @@ class Rabbitcal_regitstraion extends StatefulWidget {
 }
 class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   person? _human =person.male;//_human에 성별들어감
+  final _formKey=GlobalKey<FormState>();
 
   final _valueList=['저체중 강인형','표준체중 강인형','과체중 강인형'];
   var _selectedvalue='저체중 강인형';
@@ -89,16 +90,27 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                   },
                 ),
 
-                Container(
-                  width:500,height:70,
-                  child: TextField(
-                    style: TextStyle(fontSize:22),
-                    textAlign:TextAlign.center,
-                    decoration: InputDecoration(labelText:'몸무게'),
-                    textInputAction: TextInputAction.next,
-                    onChanged: (value){
-                      Weight =double.parse(value);
-                    },
+                Form(
+                  key:_formKey,
+                  child: Container(
+                    width:500,height:70,
+                    child: TextFormField(
+                      validator:(value)
+                      {
+                        if(value==null||value.isEmpty)
+                        {
+                          return '정보를 입력하세요.';
+                        }
+                        return null;
+                      },
+                      style: TextStyle(fontSize:22),
+                      textAlign:TextAlign.center,
+                      decoration: InputDecoration(labelText:'몸무게'),
+                      textInputAction: TextInputAction.next,
+                      onChanged: (value){
+                        Weight =double.parse(value);
+                      },
+                    ),
                   ),
                 ),
 
@@ -187,8 +199,9 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                               fontSize:30,
                             ) ,
                           ) ,
-                          onPressed:(){
-                            Scaffold.of(ctx).showSnackBar(SnackBar(
+    onPressed:(){
+    if(_formKey.currentState!.validate())
+    Scaffold.of(ctx).showSnackBar(SnackBar(
                               content:Text('등록 완료!',
                                   textAlign: TextAlign.center,
                                   style:TextStyle(
