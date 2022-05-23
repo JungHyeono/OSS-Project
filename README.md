@@ -2,7 +2,6 @@
 This branch only used for modify feature of checkEveryday, crawling,recommandShop,Mainpage,Registration.
 DO NOT MODIFY FEATURE IF YOU WANT TO MODIFY OTHER FEATURE.(ONLY FOR MODIFY FEATURE EVERYDAY)
 
-
 ## 설치 방법
 
 ## 의존성 명시
