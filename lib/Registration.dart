@@ -11,6 +11,7 @@ class Rabbitcal_regitstraion extends StatefulWidget {
 }
 class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   person? _human =person.male;//_human에 성별들어감
+
   final _formKey=GlobalKey<FormState>();
   final _formKey2=GlobalKey<FormState>();
   final _formKey3=GlobalKey<FormState>();
@@ -21,6 +22,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   final _valueList=['저체중 강인형','표준체중 강인형','과체중 강인형'];
   var _selectedvalue='저체중 강인형';
 
+  String result="";
   double Weight=0;
   double Height=0;
   double Right_arm_muscle=0;
@@ -29,6 +31,13 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   double Left_leg_muscle=0;
   double Body_fat=0;
 
+  void compare()
+  {
+    if(_human==person.male)
+      {
+
+      }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
