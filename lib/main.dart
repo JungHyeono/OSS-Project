@@ -112,7 +112,7 @@ class Rabbitcalmain extends StatelessWidget {
                       ),),
                       color:Colors.white,
                       onPressed: () { //운동추천페이지 이동
-                         },
+                      },
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       )
@@ -124,16 +124,16 @@ class Rabbitcalmain extends StatelessWidget {
                   padding: EdgeInsets.all(10),
                   margin:EdgeInsets.all(10),
                   child: RaisedButton(
-                      child: Text('운동기구 추천',style:TextStyle(
-                        fontWeight:FontWeight.bold,
-                        fontSize: 30,
-                      ),),
-                      color:Colors.white,
-                      onPressed: () { //운동 기구 추천 페이지 이동
-                         },
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
+                    child: Text('운동기구 추천',style:TextStyle(
+                      fontWeight:FontWeight.bold,
+                      fontSize: 30,
+                    ),),
+                    color:Colors.white,
+                    onPressed: () { //운동 기구 추천 페이지 이동
+                    },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
                 ),
               ]
