@@ -21,7 +21,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   final _formKey7=GlobalKey<FormState>();
   final _valueList=['저체중 강인형','표준체중 강인형','과체중 강인형'];
   var _selectedvalue='저체중 강인형';
-
+  String data="";
   String result="";
   double Weight=0;
   double Height=0;
@@ -726,6 +726,13 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                                 backgroundColor: Colors.teal,
                                 duration:Duration(milliseconds:1000),
                               ),
+                              );
+                              data=compare();
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder:(context)=>recommandExecise(data),
+                                  )
                               );
                             }
                           },
