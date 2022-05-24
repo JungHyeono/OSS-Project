@@ -37,19 +37,71 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
       {
         if(_selectedvalue=='저체중 강인형')
           {
+           if(Height>=160&&Height<170)
+             {
 
+             }
+           else if(Height>=170&&Height<180)
+             {
+
+             }
+           else if(Height>=180)
+             {
+
+             }
+           else {
+
+           }
           }
         else if(_selectedvalue=='표준체중 강인형')
           {
+            if(Height>=160&&Height<170)
+            {
 
+            }
+            else if(Height>=170&&Height<180)
+            {
+
+            }
+            else if(Height>=180)
+            {
+
+            }
+            else {
+
+            }
           }
         else{
+          if(Height>=160&&Height<170)
+          {
 
+          }
+          else if(Height>=170&&Height<180)
+          {
+
+          }
+          else if(Height>=180)
+          {
+
+          }
+          else {
+
+          }
         }
       }
 
     else{
+      if(_selectedvalue=='저체중 강인형')
+      {
 
+      }
+      else if(_selectedvalue=='표준체중 강인형')
+      {
+
+      }
+      else{
+
+      }
     }
   }
   @override
