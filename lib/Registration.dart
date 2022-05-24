@@ -34,73 +34,293 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   void compare()
   {
     if(_human==person.male)
+    {
+      if(_selectedvalue=="저체중 강인형")
       {
-        if(_selectedvalue=='저체중 강인형')
+        if(Height>=160&&Height<170)
+        {
+          if(Weight>54&&Right_arm_muscle>=27&&Right_arm_muscle<32)
           {
-           if(Height>=160&&Height<170)
-             {
-
-             }
-           else if(Height>=170&&Height<180)
-             {
-
-             }
-           else if(Height>=180)
-             {
-
-             }
-           else {
-
-           }
           }
-        else if(_selectedvalue=='표준체중 강인형')
+          else if(Weight>54&&Right_arm_muscle>=32)
           {
-            if(Height>=160&&Height<170)
-            {
-
-            }
-            else if(Height>=170&&Height<180)
-            {
-
-            }
-            else if(Height>=180)
-            {
-
-            }
-            else {
-
-            }
           }
+          else{
+          }
+        }
+        else if(Height>=170&&Height<180){
+          if(Weight>60&&Right_arm_muscle>=30&&Right_arm_muscle<35)
+          {
+          }
+          else if(Weight>60&&Right_arm_muscle>=35)
+          {
+          }
+          else{
+          }
+        }
+        else if(Height>=180)
+        {
+          if(Weight>67&&Right_arm_muscle>=32&&Right_arm_muscle<37)
+          {
+          }
+          else if(Weight>67&&Right_arm_muscle>=37)
+          {
+          }
+          else{
+
+          }
+        }
         else{
-          if(Height>=160&&Height<170)
+          if(Weight<=54&&Right_arm_muscle>=25&&Right_arm_muscle<28)
           {
-
           }
-          else if(Height>=170&&Height<180)
+          else if(Weight<=54&&Right_arm_muscle>=28)
           {
-
           }
-          else if(Height>=180)
+          else{
+          }
+        }
+      }
+      else if(_selectedvalue=="표준체중 강인형")
+      {
+        if(Height>=160&&Height<170)
+        {
+          if(Weight>63&&Right_arm_muscle>=30&&Right_arm_muscle<34)
           {
-
           }
-          else {
-
+          else if(Weight>63&&Right_arm_muscle>=34)
+          {
+          }
+          else{
+          }
+        }
+        else if(Height>=170&&Height<180){
+          if(Weight>74&&Right_arm_muscle>=33&&Right_arm_muscle<37)
+          {
+          }
+          else if(Weight>74&&Right_arm_muscle>=37)
+          {
+          }
+          else{
+          }
+        }
+        else if(Height>=180)
+        {
+          if(Weight>79&&Right_arm_muscle>=36&&Right_arm_muscle<40)
+          {
+          }
+          else if(Weight>79&&Right_arm_muscle>=40)
+          {
+          }
+          else{
+          }
+        }
+        else{
+          if(Weight<=57&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+          }
+          else if(Weight<=57&&Right_arm_muscle>=28)
+          {
+          }
+          else{
           }
         }
       }
 
+      else {
+        if(Height>=160&&Height<170)
+        {
+          if(Weight>74&&Right_arm_muscle>=32&&Right_arm_muscle<36)
+          {
+          }
+          else if(Weight>68&&Right_arm_muscle>=36)
+          {
+          }
+          else{
+          }
+        }
+        else if(Height>=170&&Height<180){
+          if(Weight>84&&Right_arm_muscle>=35&&Right_arm_muscle<39)
+          {
+          }
+          else if(Weight>84&&Right_arm_muscle>=39)
+          {
+          }
+          else{
+          }
+        }
+        else if(Height>=180)
+        {
+          if(Weight>67&&Right_arm_muscle>=32&&Right_arm_muscle<37)
+          {
+          }
+          else if(Weight>67&&Right_arm_muscle>=37)
+          {
+          }
+          else{
+          }
+        }
+        else{
+          if(Weight<=54&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+          }
+          else if(Weight<=54&&Right_arm_muscle>=28)
+          {
+          }
+          else{
+          }
+        }
+      }
+    }
+    //여
     else{
-      if(_selectedvalue=='저체중 강인형')
+      if(_selectedvalue=="저체중 강인형")
       {
-
+        if(Height>=160&&Height<165)
+        {
+          if(Weight>45&&Right_arm_muscle>=22&&Right_arm_muscle<25)
+          {
+          }
+          else if(Weight>45&&Right_arm_muscle>=25)
+          {
+          }
+          else{
+          }
+        }
+        else if(Height>=165&&Height<170){
+          if(Weight>50&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+          }
+          else if(Weight>50&&Right_arm_muscle>=28)
+          {
+          }
+          else{
+          }
+        }
+        else if(Height>=170)
+        {
+          if(Weight>55&&Right_arm_muscle>=26&&Right_arm_muscle<30)
+          {
+          }
+          else if(Weight>55&&Right_arm_muscle>=30)
+          {
+          }
+          else{
+          }
+        }
+        else{
+          if(Weight<=45&&Right_arm_muscle<22)
+          {
+          }
+          else if(Weight>45&&Right_arm_muscle<22)
+          {
+          }
+          else{
+          }
+        }
       }
-      else if(_selectedvalue=='표준체중 강인형')
+      else if(_selectedvalue=="표준체중 강인형")
       {
+        if(Height>=160&&Height<165)
+        {
+          if(Weight>45&&Right_arm_muscle>=22&&Right_arm_muscle<25)
+          {
+          }
+          else if(Weight>45&&Right_arm_muscle>=25)
+          {
+          }
+          else{
 
+          }
+        }
+        else if(Height>=165&&Height<170){
+          if(Weight>50&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+
+          }
+          else if(Weight>50&&Right_arm_muscle>=28)
+          {
+
+          }
+          else{
+
+          }
+        }
+        else if(Height>=170)
+        {
+          if(Weight>55&&Right_arm_muscle>=26&&Right_arm_muscle<30)
+          {
+
+          }
+          else if(Weight>55&&Right_arm_muscle>=30)
+          {
+
+          }
+          else{
+
+          }
+        }
+        else{
+          if(Weight<=45&&Right_arm_muscle<22)
+          {
+
+          }
+          else if(Weight>45&&Right_arm_muscle<22)
+          {
+
+          }
+          else{
+
+          }
+        }
       }
-      else{
+      else {
+        if(Height>=160&&Height<165)
+        {
+          if(Weight>45&&Right_arm_muscle>=22&&Right_arm_muscle<25)
+          {
 
+          }
+          else if(Weight>45&&Right_arm_muscle>=25)
+          {
+
+          }
+          else{
+
+          }
+        }
+        else if(Height>=165&&Height<170){
+          if(Weight>50&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+          }
+          else if(Weight>50&&Right_arm_muscle>=28)
+          {
+          }
+          else{
+
+          }
+        }
+        else if(Height>=170)
+        {
+          if(Weight>55&&Right_arm_muscle>=26&&Right_arm_muscle<30)
+          {
+          }
+          else if(Weight>55&&Right_arm_muscle>=30)
+          {
+          }
+          else{
+          }
+        }
+        else{
+          if(Weight<=45&&Right_arm_muscle<22)
+          {
+          }
+          else if(Weight>45&&Right_arm_muscle<22)
+          {
+          }
+          else{
+          }
+        }
       }
     }
   }
