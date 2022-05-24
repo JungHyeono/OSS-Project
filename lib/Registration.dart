@@ -35,8 +35,22 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   {
     if(_human==person.male)
       {
+        if(_selectedvalue=='저체중 강인형')
+          {
 
+          }
+        else if(_selectedvalue=='표준체중 강인형')
+          {
+
+          }
+        else{
+
+        }
       }
+
+    else{
+
+    }
   }
   @override
   Widget build(BuildContext context) {
