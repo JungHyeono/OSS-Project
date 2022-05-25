@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'recommand_exercise.dart';
 enum person {male,female}
 
 class Rabbitcal_regitstraion extends StatefulWidget {
@@ -705,38 +705,53 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                 ),
                 Builder(
                     builder: (ctx) {
-                      return Container(
-                        width:100,
-                        child: RaisedButton(
-                          child: Text('확인',
-                            style:TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize:30,
-                            ) ,
-                          ) ,
-                          onPressed:(){
-                            if(_formKey.currentState!.validate()||_formKey2.currentState!.validate()||_formKey3.currentState!.validate()||_formKey4.currentState!.validate()||_formKey5.currentState!.validate()||_formKey6.currentState!.validate()||_formKey7.currentState!.validate()){
-                              Scaffold.of(ctx).showSnackBar(SnackBar(
-                                content:Text('등록 완료!',
-                                    textAlign: TextAlign.center,
+                      return Row(
+                        children:<Widget> [
+                          Container(
+                            width:100,
+                            child: RaisedButton(
+                              child: Text('확인',
+                                style:TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize:30,
+                                ) ,
+                              ) ,
+                              onPressed:(){
+                                if(_formKey.currentState!.validate()||_formKey2.currentState!.validate()||_formKey3.currentState!.validate()||_formKey4.currentState!.validate()||_formKey5.currentState!.validate()||_formKey6.currentState!.validate()||_formKey7.currentState!.validate()){
+                                  Scaffold.of(ctx).showSnackBar(SnackBar(
+                                    content:Text('등록 완료!',
+                                        textAlign: TextAlign.center,
+                                        style:TextStyle(
+                                            color:Colors.white
+                                        )
+                                    ),
+                                    backgroundColor: Colors.teal,
+                                    duration:Duration(milliseconds:1000),
+                                  ),
+                                  );
+                                  //버튼을 하나 더 만들어서 이동시키기
+                                }
+                              },
+                            ),
+                          ),
+
+                          Container(
+                              child: RaisedButton(
+                                child:Text('운동 추천!!',
                                     style:TextStyle(
-                                        color:Colors.white
-                                    )
+                                        fontWeight:FontWeight.bold,
+                                      fontSize:30,
+                                    ),
                                 ),
-                                backgroundColor: Colors.teal,
-                                duration:Duration(milliseconds:1000),
-                              ),
-                              );
-                              data=compare();
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder:(context)=>recommandExecise(data),
-                                  )
-                              );
-                            }
-                          },
-                        ),
+                                onPressed: (){
+                                  data=compare();
+                                  Navigator.push(
+                                  context,MaterialPageRoute(builder: (context)=>recommand_exercise(data))
+                                  );
+                                   },
+                              )
+                          )
+                        ],
                       );
                     }
                 ),
