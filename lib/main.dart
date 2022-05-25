@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Registration.dart';
+import 'recommandShop.dart';
+import 'getToday.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,7 +62,11 @@ class Rabbitcalmain extends StatelessWidget {
                   color: Colors.grey[850]),
               title: Text('출석 체크'),
               onTap:(){
-                print('출석체크');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder:(context)=>MyHomePage(),)
+                );
+                //출석체크 창으로 이동
               },
               trailing:Icon(Icons.check),
             ),
@@ -101,23 +107,6 @@ class Rabbitcalmain extends StatelessWidget {
                       )
                   ),
                 ),
-                Container(
-                  width:250,height:70,
-                  padding: EdgeInsets.all(10),
-                  margin:EdgeInsets.all(10),
-                  child: RaisedButton(
-                      child: Text('운동 추천',style:TextStyle(
-                        fontWeight:FontWeight.bold,
-                        fontSize: 30,
-                      ),),
-                      color:Colors.white,
-                      onPressed: () { //운동추천페이지 이동
-                      },
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      )
-                  ),
-                ),
 
                 Container(
                   width:250,height:70,
@@ -129,7 +118,13 @@ class Rabbitcalmain extends StatelessWidget {
                       fontSize: 30,
                     ),),
                     color:Colors.white,
-                    onPressed: () { //운동 기구 추천 페이지 이동
+                    onPressed: () {
+
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder:(context)=>recommandShop(),)
+                      );
+                      //운동기구 추천창으로 이동
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),

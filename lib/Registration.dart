@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'recommand_exercise.dart';
 enum person {male,female}
 
 class Rabbitcal_regitstraion extends StatefulWidget {
@@ -11,6 +11,7 @@ class Rabbitcal_regitstraion extends StatefulWidget {
 }
 class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   person? _human =person.male;//_human에 성별들어감
+
   final _formKey=GlobalKey<FormState>();
   final _formKey2=GlobalKey<FormState>();
   final _formKey3=GlobalKey<FormState>();
@@ -20,7 +21,8 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   final _formKey7=GlobalKey<FormState>();
   final _valueList=['저체중 강인형','표준체중 강인형','과체중 강인형'];
   var _selectedvalue='저체중 강인형';
-
+  String data="";
+  String result="";
   double Weight=0;
   double Height=0;
   double Right_arm_muscle=0;
@@ -29,6 +31,442 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
   double Left_leg_muscle=0;
   double Body_fat=0;
 
+  String compare()
+  {
+    if(_human==person.male)
+    {
+      if(_selectedvalue=="저체중 강인형")
+      {
+        if(Height>=160&&Height<170)
+        {
+          if(Weight>54&&Right_arm_muscle>=27&&Right_arm_muscle<32)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>54&&Right_arm_muscle>=32)
+          {
+            result="강함";
+            return result;
+            //근
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=170&&Height<180){
+          if(Weight>60&&Right_arm_muscle>=30&&Right_arm_muscle<35)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>60&&Right_arm_muscle>=35)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=180)
+        {
+          if(Weight>67&&Right_arm_muscle>=32&&Right_arm_muscle<37)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>67&&Right_arm_muscle>=37)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else{
+          if(Weight<=54&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight<=54&&Right_arm_muscle>=28)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+      }
+      else if(_selectedvalue=="표준체중 강인형")
+      {
+        if(Height>=160&&Height<170)
+        {
+          if(Weight>63&&Right_arm_muscle>=30&&Right_arm_muscle<34)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>63&&Right_arm_muscle>=34)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=170&&Height<180){
+          if(Weight>74&&Right_arm_muscle>=33&&Right_arm_muscle<37)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>74&&Right_arm_muscle>=37)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=180)
+        {
+          if(Weight>79&&Right_arm_muscle>=36&&Right_arm_muscle<40)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>79&&Right_arm_muscle>=40)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else{
+          if(Weight<=57&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight<=57&&Right_arm_muscle>=28)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+      }
+
+      else {
+        if(Height>=160&&Height<170)
+        {
+          if(Weight>74&&Right_arm_muscle>=32&&Right_arm_muscle<36)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>68&&Right_arm_muscle>=36)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=170&&Height<180){
+          if(Weight>84&&Right_arm_muscle>=35&&Right_arm_muscle<39)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>84&&Right_arm_muscle>=39)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=180)
+        {
+          if(Weight>67&&Right_arm_muscle>=32&&Right_arm_muscle<37)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>67&&Right_arm_muscle>=37)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else{
+          if(Weight<=54&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight<=54&&Right_arm_muscle>=28)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+      }
+    }
+    //여
+    else{
+      if(_selectedvalue=="저체중 강인형")
+      {
+        if(Height>=160&&Height<165)
+        {
+          if(Weight>45&&Right_arm_muscle>=22&&Right_arm_muscle<25)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>45&&Right_arm_muscle>=25)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=165&&Height<170){
+          if(Weight>50&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>50&&Right_arm_muscle>=28)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=170)
+        {
+          if(Weight>55&&Right_arm_muscle>=26&&Right_arm_muscle<30)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>55&&Right_arm_muscle>=30)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else{
+          if(Weight<=45&&Right_arm_muscle<22)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>45&&Right_arm_muscle<22)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+      }
+      else if(_selectedvalue=="표준체중 강인형")
+      {
+        if(Height>=160&&Height<165)
+        {
+          if(Weight>45&&Right_arm_muscle>=22&&Right_arm_muscle<25)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>45&&Right_arm_muscle>=25)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=165&&Height<170){
+          if(Weight>50&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+
+            result="보통";
+            return result;
+          }
+          else if(Weight>50&&Right_arm_muscle>=28)
+          {
+
+            result="강함";
+            return result;
+          }
+          else{
+
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=170)
+        {
+          if(Weight>55&&Right_arm_muscle>=26&&Right_arm_muscle<30)
+          {
+
+            result="보통";
+            return result;
+          }
+          else if(Weight>55&&Right_arm_muscle>=30)
+          {
+
+            result="강함";
+            return result;
+          }
+          else{
+
+            result="약함";
+            return result;
+          }
+        }
+        else{
+          if(Weight<=45&&Right_arm_muscle<22)
+          {
+
+            result="보통";
+            return result;
+          }
+          else if(Weight>45&&Right_arm_muscle<22)
+          {
+
+            result="강함";
+            return result;
+          }
+          else{
+
+            result="약함";
+            return result;
+          }
+        }
+      }
+      else {
+        if(Height>=160&&Height<165)
+        {
+          if(Weight>45&&Right_arm_muscle>=22&&Right_arm_muscle<25)
+          {
+
+            result="보통";
+            return result;
+          }
+          else if(Weight>45&&Right_arm_muscle>=25)
+          {
+
+            result="강함";
+            return result;
+          }
+          else{
+
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=165&&Height<170){
+          if(Weight>50&&Right_arm_muscle>=25&&Right_arm_muscle<28)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>50&&Right_arm_muscle>=28)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+
+            result="약함";
+            return result;
+          }
+        }
+        else if(Height>=170)
+        {
+          if(Weight>55&&Right_arm_muscle>=26&&Right_arm_muscle<30)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>55&&Right_arm_muscle>=30)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+        else{
+          if(Weight<=45&&Right_arm_muscle<22)
+          {
+            result="보통";
+            return result;
+          }
+          else if(Weight>45&&Right_arm_muscle<22)
+          {
+            result="강함";
+            return result;
+          }
+          else{
+            result="약함";
+            return result;
+          }
+        }
+      }
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -267,31 +705,53 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                 ),
                 Builder(
                     builder: (ctx) {
-                      return Container(
-                        width:100,
-                        child: RaisedButton(
-                          child: Text('확인',
-                            style:TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize:30,
-                            ) ,
-                          ) ,
-                          onPressed:(){
-                            if(_formKey.currentState!.validate()||_formKey2.currentState!.validate()||_formKey3.currentState!.validate()||_formKey4.currentState!.validate()||_formKey5.currentState!.validate()||_formKey6.currentState!.validate()||_formKey7.currentState!.validate()){
-                              Scaffold.of(ctx).showSnackBar(SnackBar(
-                                content:Text('등록 완료!',
-                                    textAlign: TextAlign.center,
+                      return Row(
+                        children:<Widget> [
+                          Container(
+                            width:100,
+                            child: RaisedButton(
+                              child: Text('확인',
+                                style:TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize:30,
+                                ) ,
+                              ) ,
+                              onPressed:(){
+                                if(_formKey.currentState!.validate()||_formKey2.currentState!.validate()||_formKey3.currentState!.validate()||_formKey4.currentState!.validate()||_formKey5.currentState!.validate()||_formKey6.currentState!.validate()||_formKey7.currentState!.validate()){
+                                  Scaffold.of(ctx).showSnackBar(SnackBar(
+                                    content:Text('등록 완료!',
+                                        textAlign: TextAlign.center,
+                                        style:TextStyle(
+                                            color:Colors.white
+                                        )
+                                    ),
+                                    backgroundColor: Colors.teal,
+                                    duration:Duration(milliseconds:1000),
+                                  ),
+                                  );
+                                  //버튼을 하나 더 만들어서 이동시키기
+                                }
+                              },
+                            ),
+                          ),
+
+                          Container(
+                              child: RaisedButton(
+                                child:Text('운동 추천!!',
                                     style:TextStyle(
-                                        color:Colors.white
-                                    )
+                                        fontWeight:FontWeight.bold,
+                                      fontSize:30,
+                                    ),
                                 ),
-                                backgroundColor: Colors.teal,
-                                duration:Duration(milliseconds:1000),
-                              ),
-                              );
-                            }
-                          },
-                        ),
+                                onPressed: (){
+                                  data=compare();
+                                  Navigator.push(
+                                  context,MaterialPageRoute(builder: (context)=>recommand_exercise(data))
+                                  );
+                                   },
+                              )
+                          )
+                        ],
                       );
                     }
                 ),
