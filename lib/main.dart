@@ -58,15 +58,15 @@ class Rabbitcalmain extends StatelessWidget {
                 )
             ),
             ListTile(
-              leading: Icon(Icons.home,
+              leading: Icon(Icons.health_and_safety,
                   color: Colors.grey[850]),
               title: Text('출석 체크'),
               onTap:(){
                 Navigator.push(
                     context,
-                    MaterialPageRoute(builder:(context)=>MyHomePage(),)
+                    MaterialPageRoute(builder:(context)=>Check(),)
                 );
-                //출석체크 창으로 이동
+
               },
               trailing:Icon(Icons.check),
             ),

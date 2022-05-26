@@ -10,7 +10,7 @@ class Rabbitcal_regitstraion extends StatefulWidget {
 
 }
 class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
-  person? _human =person.male;//_human에 성별들어감
+  person? _human =person.male;
 
   final _formKey=GlobalKey<FormState>();
   final _formKey2=GlobalKey<FormState>();
@@ -244,7 +244,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         }
       }
     }
-    //여
+
     else{
       if(_selectedvalue=="저체중 강인형")
       {
@@ -729,7 +729,6 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                                     duration:Duration(milliseconds:1000),
                                   ),
                                   );
-                                  //버튼을 하나 더 만들어서 이동시키기
                                 }
                               },
                             ),

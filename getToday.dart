@@ -16,21 +16,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: '출석체크 데모버전'),
+      home: const Check(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+
+class Check extends StatefulWidget {
+  const Check({Key? key}) : super(key: key);
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Check> createState() => _CheckState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _CheckState extends State<Check> {
   int _counter = 0;
   List<String> date=[];
 
