@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'recommand_exercise.dart';
+import 'test.dart';
+
 enum person {male,female}
 
 class Rabbitcal_regitstraion extends StatefulWidget {
@@ -48,7 +49,6 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
           {
             result="강함";
             return result;
-            //근
           }
           else{
             result="약함";
@@ -717,7 +717,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                                 ) ,
                               ) ,
                               onPressed:(){
-                                if(_formKey.currentState!.validate()||_formKey2.currentState!.validate()||_formKey3.currentState!.validate()||_formKey4.currentState!.validate()||_formKey5.currentState!.validate()||_formKey6.currentState!.validate()||_formKey7.currentState!.validate()){
+                                if(_formKey.currentState!.validate()&&_formKey2.currentState!.validate()&&_formKey3.currentState!.validate()&&_formKey4.currentState!.validate()&&_formKey5.currentState!.validate()&&_formKey6.currentState!.validate()&&_formKey7.currentState!.validate()){
                                   Scaffold.of(ctx).showSnackBar(SnackBar(
                                     content:Text('등록 완료!',
                                         textAlign: TextAlign.center,
@@ -729,10 +729,13 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                                     duration:Duration(milliseconds:1000),
                                   ),
                                   );
-                                  //버튼을 하나 더 만들어서 이동시키기
                                 }
                               },
                             ),
+                          ),
+
+                          SizedBox(
+                            width: 60
                           ),
 
                           Container(
@@ -746,7 +749,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                                 onPressed: (){
                                   data=compare();
                                   Navigator.push(
-                                  context,MaterialPageRoute(builder: (context)=>recommand_exercise(data))
+                                  context,MaterialPageRoute(builder: (context)=>test(data))
                                   );
                                    },
                               )

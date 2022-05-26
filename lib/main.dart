@@ -64,9 +64,8 @@ class Rabbitcalmain extends StatelessWidget {
               onTap:(){
                 Navigator.push(
                     context,
-                    MaterialPageRoute(builder:(context)=>MyHomePage(),)
+                    MaterialPageRoute(builder:(context)=>today(),)
                 );
-                //출석체크 창으로 이동
               },
               trailing:Icon(Icons.check),
             ),
@@ -124,7 +123,6 @@ class Rabbitcalmain extends StatelessWidget {
                           context,
                           MaterialPageRoute(builder:(context)=>recommandShop(),)
                       );
-                      //운동기구 추천창으로 이동
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
