@@ -286,43 +286,119 @@ class veryDetail1_1 extends StatelessWidget {
                 Expanded(child: Container(
                   color: Colors.black, width: 100, height: 5,))
               ],),
-              Row(children: [
+              if(data=='약함')
                 Flexible(
-                  child: RichText(
-                    overflow: TextOverflow.ellipsis,
-                  maxLines: 3,
-                  text: TextSpan(
-                    text: '사용자님에게 추천하는 운동은 저강도 운동입니다!',
-                    style: TextStyle(fontSize: 30, color: Colors.black)),
-                  ),
-                )
-              ],),
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 트라이셉스 덤벨 컬입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='중간')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 인클라인 덤벨 컬입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='강함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 케이블 컬입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
               Container(height: 30,),
-              Row(children: [
-                Expanded(child:
-                GestureDetector(
-                  onTap: (){
-                    _launchInBrowser('https://www.youtube.com');
-                  },
-                  child: Container(color: Colors.white, width: 100, height: 50,
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child:
-                        Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
-                          ],
-                        ),
-                      ],),
-                  ),
-                ),),
-              ],
-              ),
+              if(data=='약함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://www.youtube.com/watch?v=NqSfpsJn8M8&t=2s');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='중간')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://www.youtube.com/watch?v=tONpT5wPXwU');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='강함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://www.youtube.com/watch?v=qkQdIMW1xlw&t=7s');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+
             ])
     );
   }
@@ -375,41 +451,119 @@ class veryDetail1_2 extends StatelessWidget {
                 Expanded(child: Container(
                   color: Colors.black, width: 100, height: 5,))
               ],),
-              Flexible(
-                  child: RichText(
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 5,
-                      strutStyle: StrutStyle(fontSize: 16.0),
-                      text: TextSpan(
+              if(data=='약함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
                         text:
-                        '사용자님에게 추천하는 운동은 저강도 운동입니다!',
-                        style: TextStyle(fontSize: 30,color: Colors.black),))),
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 트라이셉스 푸쉬다운입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='중간')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 트라이셉스 리버스 푸쉬다운입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='강함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 트라이셉스 딥스입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
               Container(height: 30,),
-              Row(children: [
-                Expanded(child:
-                GestureDetector(
-                  onTap: (){
-                    _launchInBrowser('https://www.youtube.com');
-                  },
-                  child: Container(color: Colors.white, width: 100, height: 50,
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child:
-                            Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
-                          ],
-                        ),
-                      ],),
-                  ),
-                ),),
-              ],
-              ),
+              if(data=='약함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://www.youtube.com/watch?v=H7chkYEglGg');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='중간')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://www.youtube.com/watch?v=EiEoZ0tlJ7o');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='강함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://www.youtube.com/watch?v=4vSP9HK3EN0');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+
             ])
     );
   }
@@ -462,41 +616,119 @@ class veryDetail1_3 extends StatelessWidget {
                 Expanded(child: Container(
                   color: Colors.black, width: 100, height: 5,))
               ],),
-              Flexible(
-                  child: RichText(
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 5,
-                      strutStyle: StrutStyle(fontSize: 16.0),
-                      text: TextSpan(
+              if(data=='약함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
                         text:
-                        '사용자님에게 추천하는 운동은 저강도 운동입니다!',
-                        style: TextStyle(fontSize: 30,color: Colors.black),))),
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 리스트 컬입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='중간')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 리버스 리스트컬입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='강함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 조트맨컬입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
               Container(height: 30,),
-              Row(children: [
-                Expanded(child:
-                GestureDetector(
-                  onTap: (){
-                    _launchInBrowser('https://www.youtube.com');
-                  },
-                  child: Container(color: Colors.white, width: 100, height: 50,
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child:
-                            Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
-                          ],
-                        ),
-                      ],),
-                  ),
-                ),),
-              ],
-              ),
+              if(data=='약함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://www.youtube.com/watch?v=L-SfEPBlFCM');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='중간')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://www.youtube.com/watch?v=09_ZzrjeI64');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='강함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://www.youtube.com/watch?v=o-paJ5hFMyg');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+
             ])
     );
   }
@@ -549,41 +781,119 @@ class veryDetail2_1 extends StatelessWidget {
                 Expanded(child: Container(
                   color: Colors.black, width: 100, height: 5,))
               ],),
-              Flexible(
-                  child: RichText(
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 5,
-                      strutStyle: StrutStyle(fontSize: 16.0),
-                      text: TextSpan(
+              if(data=='약함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
                         text:
-                        '사용자님에게 추천하는 운동은 저강도 운동입니다!',
-                        style: TextStyle(fontSize: 30,color: Colors.black),))),
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 스쿼트입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='중간')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 레그프레스입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='강함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 레그익스텐션입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
               Container(height: 30,),
-              Row(children: [
-                Expanded(child:
-                GestureDetector(
-                  onTap: (){
-                    _launchInBrowser('https://www.youtube.com');
-                  },
-                  child: Container(color: Colors.white, width: 100, height: 50,
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child:
-                            Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
-                          ],
-                        ),
-                      ],),
-                  ),
-                ),),
-              ],
-              ),
+              if(data=='약함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/q6hBSSfokzY');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='중간')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/EV0F_3S7Sks');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='강함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/mS9iwXhycJI');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+
             ])
     );
   }
@@ -636,41 +946,119 @@ class veryDetail2_2 extends StatelessWidget {
                 Expanded(child: Container(
                   color: Colors.black, width: 100, height: 5,))
               ],),
-              Flexible(
-                  child: RichText(
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 5,
-                      strutStyle: StrutStyle(fontSize: 16.0),
-                      text: TextSpan(
+              if(data=='약함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
                         text:
-                        '사용자님에게 추천하는 운동은 저강도 운동입니다!',
-                        style: TextStyle(fontSize: 30,color: Colors.black),))),
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 스티프 데드리프트입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='중간')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 루마니안 데드리프트입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='강함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 레그 컬입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
               Container(height: 30,),
-              Row(children: [
-                Expanded(child:
-                GestureDetector(
-                  onTap: (){
-                    _launchInBrowser('https://www.youtube.com');
-                  },
-                  child: Container(color: Colors.white, width: 100, height: 50,
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child:
-                            Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
-                          ],
-                        ),
-                      ],),
-                  ),
-                ),),
-              ],
-              ),
+              if(data=='약함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/0InCElXJJ9E');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='중간')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/D0e1xbdRONo');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='강함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/9w8d_EL-7e4');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+
             ])
     );
   }
@@ -723,41 +1111,119 @@ class veryDetail2_3 extends StatelessWidget {
                 Expanded(child: Container(
                   color: Colors.black, width: 100, height: 5,))
               ],),
-              Flexible(
-                  child: RichText(
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 5,
-                      strutStyle: StrutStyle(fontSize: 16.0),
-                      text: TextSpan(
+              if(data=='약함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
                         text:
-                        '사용자님에게 추천하는 운동은 저강도 운동입니다!',
-                        style: TextStyle(fontSize: 30,color: Colors.black),))),
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 런지입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='중간')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 점프 스쿼트입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='강함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 덩키 킥입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
               Container(height: 30,),
-              Row(children: [
-                Expanded(child:
-                GestureDetector(
-                  onTap: (){
-                    _launchInBrowser('https://www.youtube.com');
-                  },
-                  child: Container(color: Colors.white, width: 100, height: 50,
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child:
-                            Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
-                          ],
-                        ),
-                      ],),
-                  ),
-                ),),
-              ],
-              ),
+              if(data=='약함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/CaT6kHxngJE');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='중간')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/A3fFpNkBu4o');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='강함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/XPxztfEFYyo');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+
             ])
     );
   }
@@ -810,41 +1276,119 @@ class veryDetail2_4 extends StatelessWidget {
                 Expanded(child: Container(
                   color: Colors.black, width: 100, height: 5,))
               ],),
-              Flexible(
-                  child: RichText(
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 5,
-                      strutStyle: StrutStyle(fontSize: 16.0),
-                      text: TextSpan(
+              if(data=='약함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
                         text:
-                        '사용자님에게 추천하는 운동은 저강도 운동입니다!',
-                        style: TextStyle(fontSize: 30,color: Colors.black),))),
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 카프레이즈입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='중간')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 카프레이즈입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
+              if(data=='강함')
+                Flexible(
+                    child: RichText(
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 5,
+                        strutStyle: StrutStyle(fontSize: 16.0),
+                        text:
+                        TextSpan(
+                          text:
+                          '사용자님에게 추천하는 운동은 카프레이즈입니다!',
+                          style: TextStyle(fontSize: 30,color: Colors.black),))),
               Container(height: 30,),
-              Row(children: [
-                Expanded(child:
-                GestureDetector(
-                  onTap: (){
-                    _launchInBrowser('https://www.youtube.com');
-                  },
-                  child: Container(color: Colors.white, width: 100, height: 50,
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Center(child:
-                            Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
-                          ],
-                        ),
-                      ],),
-                  ),
-                ),),
-              ],
-              ),
+              if(data=='약함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/YmmFMZF8A48');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='중간')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/YmmFMZF8A48');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+              if(data=='강함')
+                Row(children: [
+                  Expanded(child:
+                  GestureDetector(
+                    onTap: (){
+                      _launchInBrowser('https://youtu.be/YmmFMZF8A48');
+                    },
+                    child: Container(color: Colors.white, width: 100, height: 50,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Center(child:
+                              Text("유튜브 바로가기", style: TextStyle(fontSize: 20)))
+                            ],
+                          ),
+                        ],),
+                    ),
+                  ),),
+                ]
+                ),
+
             ])
     );
   }
