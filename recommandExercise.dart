@@ -44,6 +44,7 @@ class first extends StatelessWidget {
         ));
   }
 }
+
 class detail1 extends StatelessWidget {
   final String data;
   const detail1(this.data);
@@ -89,8 +90,8 @@ class detail1 extends StatelessWidget {
 }
 
 class detail2 extends StatelessWidget {
-  const detail2({Key? key}) : super(key: key);
-
+  final String data;
+  const detail2(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,7 +107,7 @@ class detail2 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail2_1()));
+                    MaterialPageRoute(builder: (context) => veryDetail2_1(data)));
               },
             ),
             ListTile(
@@ -115,7 +116,7 @@ class detail2 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail2_2()));
+                    MaterialPageRoute(builder: (context) => veryDetail2_2(data)));
               },
             ),
             ListTile(
@@ -124,7 +125,7 @@ class detail2 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail2_3()));
+                    MaterialPageRoute(builder: (context) => veryDetail2_3(data)));
               },
             ),
             ListTile(
@@ -133,7 +134,7 @@ class detail2 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail2_4()));
+                    MaterialPageRoute(builder: (context) => veryDetail2_4(data)));
               },
             )
           ],
@@ -142,8 +143,8 @@ class detail2 extends StatelessWidget {
 }
 
 class detail3 extends StatelessWidget {
-  const detail3({Key? key}) : super(key: key);
-
+  final String data;
+  const detail3(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -159,7 +160,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_1()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_1(data)));
               },
             ),
             ListTile(
@@ -168,7 +169,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_2()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_2(data)));
               },
             ),
             ListTile(
@@ -177,7 +178,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_3()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_3(data)));
               },
             ),
             ListTile(
@@ -186,7 +187,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_4()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_4(data)));
               },
             ),
             ListTile(
@@ -195,7 +196,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_5()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_5(data)));
               },
             ),
 
@@ -203,9 +204,6 @@ class detail3 extends StatelessWidget {
         ));
   }
 }
-
-
-
 
 Future<void> _launchInBrowser(String url) async {
   if (await canLaunch(url)) {
@@ -222,9 +220,8 @@ Future<void> _launchInBrowser(String url) async {
 
 
 class veryDetail1_1 extends StatelessWidget {
-  const veryDetail1_1({Key? key}) : super(key: key);
-
-
+  final String data;
+  const veryDetail1_1(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -248,7 +245,7 @@ class veryDetail1_1 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/idu.png',
+                  'idu.png',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -315,7 +312,7 @@ class veryDetail1_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -341,7 +338,7 @@ class veryDetail1_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -367,7 +364,7 @@ class veryDetail1_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -388,7 +385,8 @@ class veryDetail1_1 extends StatelessWidget {
 }
 
 class veryDetail1_2 extends StatelessWidget {
-  const veryDetail1_2({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail1_2(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -413,7 +411,7 @@ class veryDetail1_2 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/3du.png',
+                  '3du.png',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -480,7 +478,7 @@ class veryDetail1_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -506,7 +504,7 @@ class veryDetail1_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -532,7 +530,7 @@ class veryDetail1_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -553,7 +551,8 @@ class veryDetail1_2 extends StatelessWidget {
 }
 
 class veryDetail1_3 extends StatelessWidget {
-  const veryDetail1_3({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail1_3(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -578,7 +577,7 @@ class veryDetail1_3 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/junwan.jpg',
+                  'junwan.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -645,7 +644,7 @@ class veryDetail1_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -671,7 +670,7 @@ class veryDetail1_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -697,7 +696,7 @@ class veryDetail1_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -718,7 +717,8 @@ class veryDetail1_3 extends StatelessWidget {
 }
 
 class veryDetail2_1 extends StatelessWidget {
-  const veryDetail2_1({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail2_1(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -743,7 +743,7 @@ class veryDetail2_1 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/daefront.png',
+                  'daefront.png',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -810,7 +810,7 @@ class veryDetail2_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -836,7 +836,7 @@ class veryDetail2_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -862,7 +862,7 @@ class veryDetail2_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -883,7 +883,8 @@ class veryDetail2_1 extends StatelessWidget {
 }
 
 class veryDetail2_2 extends StatelessWidget {
-  const veryDetail2_2({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail2_2(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -908,7 +909,7 @@ class veryDetail2_2 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/daeback.jpg',
+                  'daeback.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -975,7 +976,7 @@ class veryDetail2_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1001,7 +1002,7 @@ class veryDetail2_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1027,7 +1028,7 @@ class veryDetail2_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1048,7 +1049,8 @@ class veryDetail2_2 extends StatelessWidget {
 }
 
 class veryDetail2_3 extends StatelessWidget {
-  const veryDetail2_3({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail2_3(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -1073,7 +1075,7 @@ class veryDetail2_3 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/daedun.jpg',
+                  'daedun.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1140,7 +1142,7 @@ class veryDetail2_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1166,7 +1168,7 @@ class veryDetail2_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1192,7 +1194,7 @@ class veryDetail2_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1213,7 +1215,8 @@ class veryDetail2_3 extends StatelessWidget {
 }
 
 class veryDetail2_4 extends StatelessWidget {
-  const veryDetail2_4({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail2_4(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -1238,7 +1241,7 @@ class veryDetail2_4 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/bibok.jpg',
+                  'bibok.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1305,7 +1308,7 @@ class veryDetail2_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1331,7 +1334,7 @@ class veryDetail2_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1357,7 +1360,7 @@ class veryDetail2_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1378,7 +1381,8 @@ class veryDetail2_4 extends StatelessWidget {
 }
 
 class veryDetail3_1 extends StatelessWidget {
-  const veryDetail3_1({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_1(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -1403,7 +1407,7 @@ class veryDetail3_1 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/daehung.jpg',
+                  'daehung.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1470,7 +1474,7 @@ class veryDetail3_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1496,7 +1500,7 @@ class veryDetail3_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1522,7 +1526,7 @@ class veryDetail3_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1543,7 +1547,8 @@ class veryDetail3_1 extends StatelessWidget {
 }
 
 class veryDetail3_2 extends StatelessWidget {
-  const veryDetail3_2({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_2(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -1568,7 +1573,7 @@ class veryDetail3_2 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/bok.jpg',
+                  'bok.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1635,7 +1640,7 @@ class veryDetail3_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1661,7 +1666,7 @@ class veryDetail3_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1687,7 +1692,7 @@ class veryDetail3_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1708,7 +1713,8 @@ class veryDetail3_2 extends StatelessWidget {
 }
 
 class veryDetail3_3 extends StatelessWidget {
-  const veryDetail3_3({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_3(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -1733,7 +1739,7 @@ class veryDetail3_3 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/seungmo.jpg',
+                  'seungmo.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1800,7 +1806,7 @@ class veryDetail3_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1826,7 +1832,7 @@ class veryDetail3_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1852,7 +1858,7 @@ class veryDetail3_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1873,7 +1879,8 @@ class veryDetail3_3 extends StatelessWidget {
 }
 
 class veryDetail3_4 extends StatelessWidget {
-  const veryDetail3_4({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_4(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -1898,7 +1905,7 @@ class veryDetail3_4 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/triangle.png',
+                  'triangle.png',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1965,7 +1972,7 @@ class veryDetail3_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1991,7 +1998,7 @@ class veryDetail3_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -2017,7 +2024,7 @@ class veryDetail3_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -2039,7 +2046,8 @@ class veryDetail3_4 extends StatelessWidget {
 
 
 class veryDetail3_5 extends StatelessWidget {
-  const veryDetail3_5({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_5(this.data);
 
   @override
   Widget build(BuildContext context) {
@@ -2064,7 +2072,7 @@ class veryDetail3_5 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/gwangbae.jpg',
+                  'gwangbae.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -2131,7 +2139,7 @@ class veryDetail3_5 extends StatelessWidget {
                       children: [
                         Column(
                           children: [
-                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                           ],
                         ),
                         Column(
@@ -2157,7 +2165,7 @@ class veryDetail3_5 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -2183,7 +2191,7 @@ class veryDetail3_5 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
