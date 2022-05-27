@@ -57,6 +57,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0"
+<<<<<<< HEAD
   ffi:
     dependency: transitive
     description:
@@ -71,6 +72,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.2"
+=======
+>>>>>>> acbf9e3d0f609b74af8a71ab6de411e5ca6ce738
   flutter:
     dependency: "direct main"
     description: flutter
@@ -156,6 +159,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.1"
+<<<<<<< HEAD
   path_provider_linux:
     dependency: transitive
     description:
@@ -261,6 +265,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
+=======
+>>>>>>> acbf9e3d0f609b74af8a71ab6de411e5ca6ce738
   sky_engine:
     dependency: transitive
     description: flutter
@@ -308,6 +314,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.9"
+<<<<<<< HEAD
   typed_data:
     dependency: transitive
     description:
@@ -357,6 +364,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.1+3"
+=======
+>>>>>>> acbf9e3d0f609b74af8a71ab6de411e5ca6ce738
   vector_math:
     dependency: transitive
     description:
@@ -364,6 +373,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.2"
+<<<<<<< HEAD
   win32:
     dependency: transitive
     description:
@@ -381,3 +391,7 @@ packages:
 sdks:
   dart: ">=2.17.0 <3.0.0"
   flutter: ">=2.8.0"
+=======
+sdks:
+  dart: ">=2.17.0-0 <3.0.0"
+>>>>>>> acbf9e3d0f609b74af8a71ab6de411e5ca6ce738
