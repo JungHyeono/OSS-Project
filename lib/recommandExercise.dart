@@ -268,6 +268,16 @@ class veryDetail1_1 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 이두근육 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -434,6 +444,16 @@ class veryDetail1_2 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 삼두근육 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -600,6 +620,16 @@ class veryDetail1_3 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 전완근육 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -766,6 +796,16 @@ class veryDetail2_1 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 대퇴근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -932,6 +972,16 @@ class veryDetail2_2 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 대퇴이두근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1098,6 +1148,16 @@ class veryDetail2_3 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 대둔근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1264,6 +1324,16 @@ class veryDetail2_4 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 비복근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1430,6 +1500,16 @@ class veryDetail3_1 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 대흉근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1596,6 +1676,16 @@ class veryDetail3_2 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 복근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1762,6 +1852,16 @@ class veryDetail3_3 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 승모근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1928,6 +2028,16 @@ class veryDetail3_4 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 삼각근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -2095,6 +2205,16 @@ class veryDetail3_5 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 광배근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
