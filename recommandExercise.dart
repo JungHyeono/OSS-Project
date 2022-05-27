@@ -1,25 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: first(),
-    );
-  }
-}
-
-String data='';
-
 class first extends StatelessWidget {
+  final String data;
+  const first(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,40 +14,39 @@ class first extends StatelessWidget {
           scrollDirection: Axis.vertical,
           children: [
             ListTile(
-              leading: Image.asset('images/armMuscleicon.png'),
+              leading: Image.asset('armMuscleicon.png'),
               title: Text('팔근육'),
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => detail1()));
+                    MaterialPageRoute(builder: (context) => detail1(data)));
               },
             ),
             ListTile(
-              leading: Image.asset('images/legMuscleicon.png'),
+              leading: Image.asset('legMuscleicon.png'),
               title: Text('다리근육'),
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => detail2()));
+                    MaterialPageRoute(builder: (context) => detail2(data)));
               },
             ),
             ListTile(
-              leading: Image.asset('images/sixPackicon.png'),
+              leading: Image.asset('sixPackicon.png'),
               title: Text('몸통근육'),
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => detail3()));
+                    MaterialPageRoute(builder: (context) => detail3(data)));
               },
             )
           ],
         ));
   }
 }
-
 class detail1 extends StatelessWidget {
-  const detail1({Key? key}) : super(key: key);
-
+  final String data;
+  const detail1(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,7 +62,7 @@ class detail1 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail1_1()));
+                    MaterialPageRoute(builder: (context) => veryDetail1_1(data)));
               },
             ),
             ListTile(
@@ -88,7 +71,7 @@ class detail1 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail1_2()));
+                    MaterialPageRoute(builder: (context) => veryDetail1_2(data)));
               },
             ),
             ListTile(
@@ -97,7 +80,7 @@ class detail1 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail1_3()));
+                    MaterialPageRoute(builder: (context) => veryDetail1_3(data)));
               },
             )
           ],
