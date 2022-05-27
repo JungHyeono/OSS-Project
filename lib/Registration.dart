@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'recommand_exercise.dart';
+import 'recommandExercise.dart';
 enum person {male,female}
 
 class Rabbitcal_regitstraion extends StatefulWidget {
@@ -733,6 +733,9 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                               },
                             ),
                           ),
+                          sizedBox(
+                            width:60,
+                          ),
 
                           Container(
                               child: RaisedButton(
@@ -742,10 +745,10 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                                       fontSize:30,
                                     ),
                                 ),
-                                onPressed: (){
+                          onPressed: (){
                                   data=compare();
                                   Navigator.push(
-                                  context,MaterialPageRoute(builder: (context)=>recommand_exercise(data))
+                                  context,MaterialPageRoute(builder: (context)=>first(data))
                                   );
                                    },
                               )
