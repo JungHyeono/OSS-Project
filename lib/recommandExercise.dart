@@ -64,6 +64,16 @@ class detail1 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("팔의 세부 운동"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
@@ -108,6 +118,16 @@ class detail2 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("다리의 세부 운동"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
@@ -161,6 +181,16 @@ class detail3 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("몸통의 세부 운동"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
