@@ -2,33 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class today extends StatefulWidget {
-  const today({Key? key}) : super(key: key);
-
-  @override
-
-  State<today> createState() => _todayState();
-}
-
-class _todayState extends State<today>  {
-
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Check(),
-    );
-  }
-}
-
-
 class Check extends StatefulWidget {
-  const Check({Key? key}) : super(key: key);
-
-  final String title;
-
   @override
   State<Check> createState() => _CheckState();
 }
