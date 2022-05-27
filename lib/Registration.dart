@@ -717,7 +717,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                                 ) ,
                               ) ,
                               onPressed:(){
-                                if(_formKey.currentState!.validate()||_formKey2.currentState!.validate()||_formKey3.currentState!.validate()||_formKey4.currentState!.validate()||_formKey5.currentState!.validate()||_formKey6.currentState!.validate()||_formKey7.currentState!.validate()){
+                                if(_formKey.currentState!.validate()&&_formKey2.currentState!.validate()&&_formKey3.currentState!.validate()&&_formKey4.currentState!.validate()&&_formKey5.currentState!.validate()&&_formKey6.currentState!.validate()&&_formKey7.currentState!.validate()){
                                   Scaffold.of(ctx).showSnackBar(SnackBar(
                                     content:Text('등록 완료!',
                                         textAlign: TextAlign.center,
@@ -733,7 +733,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                               },
                             ),
                           ),
-                          sizedBox(
+                          SizedBox(
                             width:60,
                           ),
 
@@ -746,10 +746,12 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                                     ),
                                 ),
                           onPressed: (){
-                                  data=compare();
+                            if(_formKey.currentState!.validate()&&_formKey2.currentState!.validate()&&_formKey3.currentState!.validate()&&_formKey4.currentState!.validate()&&_formKey5.currentState!.validate()&&_formKey6.currentState!.validate()&&_formKey7.currentState!.validate()){
+                              data=compare();
                                   Navigator.push(
                                   context,MaterialPageRoute(builder: (context)=>first(data))
                                   );
+                            }
                                    },
                               )
                           )
