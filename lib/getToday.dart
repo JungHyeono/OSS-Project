@@ -75,10 +75,15 @@ class _CheckState extends State<Check> {
               '출석체크를 하려면 버튼을 클릭하세요.',
               style: TextStyle(fontSize: 20),
             ),
-            Container(height: 70,),
+            SizedBox(
+              height: 100,
+            ),
             Text(
-              '출석체크 ${date.length} 일차! \n 등급 : <${userName(date.length)}> \n 입니다!',
-              style: Theme.of(context).textTheme.displaySmall,
+              '출석체크 ${date.length} 일차! \n 등급 : <${userName(date.length)}> 입니다!',
+              style: TextStyle(
+                fontWeight:FontWeight.bold,
+                fontSize: 40,
+              ),
             ),
           ],
         ),
