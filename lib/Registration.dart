@@ -41,7 +41,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>54&&Right_arm_muscle>=27&&Right_arm_muscle<32)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>54&&Right_arm_muscle>=32)
@@ -57,7 +57,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else if(Height>=170&&Height<180){
           if(Weight>60&&Right_arm_muscle>=30&&Right_arm_muscle<35)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>60&&Right_arm_muscle>=35)
@@ -74,7 +74,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>67&&Right_arm_muscle>=32&&Right_arm_muscle<37)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>67&&Right_arm_muscle>=37)
@@ -90,7 +90,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else{
           if(Weight<=54&&Right_arm_muscle>=25&&Right_arm_muscle<28)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight<=54&&Right_arm_muscle>=28)
@@ -110,7 +110,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>63&&Right_arm_muscle>=30&&Right_arm_muscle<34)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>63&&Right_arm_muscle>=34)
@@ -126,7 +126,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else if(Height>=170&&Height<180){
           if(Weight>74&&Right_arm_muscle>=33&&Right_arm_muscle<37)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>74&&Right_arm_muscle>=37)
@@ -143,7 +143,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>79&&Right_arm_muscle>=36&&Right_arm_muscle<40)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>79&&Right_arm_muscle>=40)
@@ -159,7 +159,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else{
           if(Weight<=57&&Right_arm_muscle>=25&&Right_arm_muscle<28)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight<=57&&Right_arm_muscle>=28)
@@ -179,7 +179,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>74&&Right_arm_muscle>=32&&Right_arm_muscle<36)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>68&&Right_arm_muscle>=36)
@@ -195,7 +195,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else if(Height>=170&&Height<180){
           if(Weight>84&&Right_arm_muscle>=35&&Right_arm_muscle<39)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>84&&Right_arm_muscle>=39)
@@ -212,7 +212,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>67&&Right_arm_muscle>=32&&Right_arm_muscle<37)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>67&&Right_arm_muscle>=37)
@@ -228,7 +228,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else{
           if(Weight<=54&&Right_arm_muscle>=25&&Right_arm_muscle<28)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight<=54&&Right_arm_muscle>=28)
@@ -251,7 +251,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>45&&Right_arm_muscle>=22&&Right_arm_muscle<25)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>45&&Right_arm_muscle>=25)
@@ -267,7 +267,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else if(Height>=165&&Height<170){
           if(Weight>50&&Right_arm_muscle>=25&&Right_arm_muscle<28)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>50&&Right_arm_muscle>=28)
@@ -284,7 +284,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>55&&Right_arm_muscle>=26&&Right_arm_muscle<30)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>55&&Right_arm_muscle>=30)
@@ -300,7 +300,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else{
           if(Weight<=45&&Right_arm_muscle<22)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>45&&Right_arm_muscle<22)
@@ -320,7 +320,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>45&&Right_arm_muscle>=22&&Right_arm_muscle<25)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>45&&Right_arm_muscle>=25)
@@ -337,7 +337,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
           if(Weight>50&&Right_arm_muscle>=25&&Right_arm_muscle<28)
           {
 
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>50&&Right_arm_muscle>=28)
@@ -357,7 +357,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
           if(Weight>55&&Right_arm_muscle>=26&&Right_arm_muscle<30)
           {
 
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>55&&Right_arm_muscle>=30)
@@ -376,7 +376,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
           if(Weight<=45&&Right_arm_muscle<22)
           {
 
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>45&&Right_arm_muscle<22)
@@ -398,7 +398,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
           if(Weight>45&&Right_arm_muscle>=22&&Right_arm_muscle<25)
           {
 
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>45&&Right_arm_muscle>=25)
@@ -416,7 +416,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else if(Height>=165&&Height<170){
           if(Weight>50&&Right_arm_muscle>=25&&Right_arm_muscle<28)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>50&&Right_arm_muscle>=28)
@@ -434,7 +434,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         {
           if(Weight>55&&Right_arm_muscle>=26&&Right_arm_muscle<30)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>55&&Right_arm_muscle>=30)
@@ -450,7 +450,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
         else{
           if(Weight<=45&&Right_arm_muscle<22)
           {
-            result="보통";
+            result="중간";
             return result;
           }
           else if(Weight>45&&Right_arm_muscle<22)
