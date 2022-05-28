@@ -1,59 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: first(),
-    );
-  }
-}
-
-String data='';
-
 class first extends StatelessWidget {
+  final String data;
+  const first(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님이 필요한 운동"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
           children: [
             ListTile(
-              leading: Image.asset('images/armMuscleicon.png'),
+              leading: Image.asset('armMuscleicon.png'),
               title: Text('팔근육'),
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => detail1()));
+                    MaterialPageRoute(builder: (context) => detail1(data)));
               },
             ),
             ListTile(
-              leading: Image.asset('images/legMuscleicon.png'),
+              leading: Image.asset('legMuscleicon.png'),
               title: Text('다리근육'),
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => detail2()));
+                    MaterialPageRoute(builder: (context) => detail2(data)));
               },
             ),
             ListTile(
-              leading: Image.asset('images/sixPackicon.png'),
+              leading: Image.asset('sixPackicon.png'),
               title: Text('몸통근육'),
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => detail3()));
+                    MaterialPageRoute(builder: (context) => detail3(data)));
               },
             )
           ],
@@ -62,13 +57,23 @@ class first extends StatelessWidget {
 }
 
 class detail1 extends StatelessWidget {
-  const detail1({Key? key}) : super(key: key);
-
+  final String data;
+  const detail1(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("팔의 세부 운동"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
@@ -79,7 +84,7 @@ class detail1 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail1_1()));
+                    MaterialPageRoute(builder: (context) => veryDetail1_1(data)));
               },
             ),
             ListTile(
@@ -88,7 +93,7 @@ class detail1 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail1_2()));
+                    MaterialPageRoute(builder: (context) => veryDetail1_2(data)));
               },
             ),
             ListTile(
@@ -97,7 +102,7 @@ class detail1 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail1_3()));
+                    MaterialPageRoute(builder: (context) => veryDetail1_3(data)));
               },
             )
           ],
@@ -106,13 +111,23 @@ class detail1 extends StatelessWidget {
 }
 
 class detail2 extends StatelessWidget {
-  const detail2({Key? key}) : super(key: key);
-
+  final String data;
+  const detail2(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("다리의 세부 운동"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
@@ -123,7 +138,7 @@ class detail2 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail2_1()));
+                    MaterialPageRoute(builder: (context) => veryDetail2_1(data)));
               },
             ),
             ListTile(
@@ -132,7 +147,7 @@ class detail2 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail2_2()));
+                    MaterialPageRoute(builder: (context) => veryDetail2_2(data)));
               },
             ),
             ListTile(
@@ -141,7 +156,7 @@ class detail2 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail2_3()));
+                    MaterialPageRoute(builder: (context) => veryDetail2_3(data)));
               },
             ),
             ListTile(
@@ -150,7 +165,7 @@ class detail2 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail2_4()));
+                    MaterialPageRoute(builder: (context) => veryDetail2_4(data)));
               },
             )
           ],
@@ -159,13 +174,23 @@ class detail2 extends StatelessWidget {
 }
 
 class detail3 extends StatelessWidget {
-  const detail3({Key? key}) : super(key: key);
-
+  final String data;
+  const detail3(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("몸통의 세부 운동"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
@@ -176,7 +201,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_1()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_1(data)));
               },
             ),
             ListTile(
@@ -185,7 +210,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_2()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_2(data)));
               },
             ),
             ListTile(
@@ -194,7 +219,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_3()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_3(data)));
               },
             ),
             ListTile(
@@ -203,7 +228,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_4()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_4(data)));
               },
             ),
             ListTile(
@@ -212,7 +237,7 @@ class detail3 extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => veryDetail3_5()));
+                    MaterialPageRoute(builder: (context) => veryDetail3_5(data)));
               },
             ),
 
@@ -220,9 +245,6 @@ class detail3 extends StatelessWidget {
         ));
   }
 }
-
-
-
 
 Future<void> _launchInBrowser(String url) async {
   if (await canLaunch(url)) {
@@ -239,14 +261,23 @@ Future<void> _launchInBrowser(String url) async {
 
 
 class veryDetail1_1 extends StatelessWidget {
-  const veryDetail1_1({Key? key}) : super(key: key);
-
-
+  final String data;
+  const veryDetail1_1(this.data);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 이두근육 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -265,7 +296,7 @@ class veryDetail1_1 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/idu.png',
+                  'idu.png',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -332,7 +363,7 @@ class veryDetail1_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -358,7 +389,7 @@ class veryDetail1_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -384,7 +415,7 @@ class veryDetail1_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -405,13 +436,24 @@ class veryDetail1_1 extends StatelessWidget {
 }
 
 class veryDetail1_2 extends StatelessWidget {
-  const veryDetail1_2({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail1_2(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 삼두근육 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -430,7 +472,7 @@ class veryDetail1_2 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/3du.png',
+                  '3du.png',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -497,7 +539,7 @@ class veryDetail1_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -523,7 +565,7 @@ class veryDetail1_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -549,7 +591,7 @@ class veryDetail1_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -570,13 +612,24 @@ class veryDetail1_2 extends StatelessWidget {
 }
 
 class veryDetail1_3 extends StatelessWidget {
-  const veryDetail1_3({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail1_3(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 전완근육 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -595,7 +648,7 @@ class veryDetail1_3 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/junwan.jpg',
+                  'junwan.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -662,7 +715,7 @@ class veryDetail1_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -688,7 +741,7 @@ class veryDetail1_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -714,7 +767,7 @@ class veryDetail1_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -735,13 +788,24 @@ class veryDetail1_3 extends StatelessWidget {
 }
 
 class veryDetail2_1 extends StatelessWidget {
-  const veryDetail2_1({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail2_1(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 대퇴근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -760,7 +824,7 @@ class veryDetail2_1 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/daefront.png',
+                  'daefront.png',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -827,7 +891,7 @@ class veryDetail2_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -853,7 +917,7 @@ class veryDetail2_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -879,7 +943,7 @@ class veryDetail2_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -900,13 +964,24 @@ class veryDetail2_1 extends StatelessWidget {
 }
 
 class veryDetail2_2 extends StatelessWidget {
-  const veryDetail2_2({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail2_2(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 대퇴이두근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -925,7 +1000,7 @@ class veryDetail2_2 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/daeback.jpg',
+                  'daeback.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -992,7 +1067,7 @@ class veryDetail2_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1018,7 +1093,7 @@ class veryDetail2_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1044,7 +1119,7 @@ class veryDetail2_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1065,13 +1140,24 @@ class veryDetail2_2 extends StatelessWidget {
 }
 
 class veryDetail2_3 extends StatelessWidget {
-  const veryDetail2_3({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail2_3(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 대둔근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1090,7 +1176,7 @@ class veryDetail2_3 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/daedun.jpg',
+                  'daedun.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1157,7 +1243,7 @@ class veryDetail2_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1183,7 +1269,7 @@ class veryDetail2_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1209,7 +1295,7 @@ class veryDetail2_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1230,13 +1316,24 @@ class veryDetail2_3 extends StatelessWidget {
 }
 
 class veryDetail2_4 extends StatelessWidget {
-  const veryDetail2_4({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail2_4(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 비복근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1255,7 +1352,7 @@ class veryDetail2_4 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/bibok.jpg',
+                  'bibok.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1322,7 +1419,7 @@ class veryDetail2_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1348,7 +1445,7 @@ class veryDetail2_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1374,7 +1471,7 @@ class veryDetail2_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1395,13 +1492,24 @@ class veryDetail2_4 extends StatelessWidget {
 }
 
 class veryDetail3_1 extends StatelessWidget {
-  const veryDetail3_1({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_1(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 대흉근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1420,7 +1528,7 @@ class veryDetail3_1 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/daehung.jpg',
+                  'daehung.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1487,7 +1595,7 @@ class veryDetail3_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1513,7 +1621,7 @@ class veryDetail3_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1539,7 +1647,7 @@ class veryDetail3_1 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1560,13 +1668,24 @@ class veryDetail3_1 extends StatelessWidget {
 }
 
 class veryDetail3_2 extends StatelessWidget {
-  const veryDetail3_2({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_2(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 복근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1585,7 +1704,7 @@ class veryDetail3_2 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/bok.jpg',
+                  'bok.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1652,7 +1771,7 @@ class veryDetail3_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1678,7 +1797,7 @@ class veryDetail3_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1704,7 +1823,7 @@ class veryDetail3_2 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1725,13 +1844,24 @@ class veryDetail3_2 extends StatelessWidget {
 }
 
 class veryDetail3_3 extends StatelessWidget {
-  const veryDetail3_3({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_3(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 승모근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1750,7 +1880,7 @@ class veryDetail3_3 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/seungmo.jpg',
+                  'seungmo.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1817,7 +1947,7 @@ class veryDetail3_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1843,7 +1973,7 @@ class veryDetail3_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1869,7 +1999,7 @@ class veryDetail3_3 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -1890,13 +2020,24 @@ class veryDetail3_3 extends StatelessWidget {
 }
 
 class veryDetail3_4 extends StatelessWidget {
-  const veryDetail3_4({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_4(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 삼각근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -1915,7 +2056,7 @@ class veryDetail3_4 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/triangle.png',
+                  'triangle.png',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -1982,7 +2123,7 @@ class veryDetail3_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -2008,7 +2149,7 @@ class veryDetail3_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -2034,7 +2175,7 @@ class veryDetail3_4 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -2056,13 +2197,24 @@ class veryDetail3_4 extends StatelessWidget {
 
 
 class veryDetail3_5 extends StatelessWidget {
-  const veryDetail3_5({Key? key}) : super(key: key);
+  final String data;
+  const veryDetail3_5(this.data);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text("사용자님에 맞는 광배근 운동법"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: Column(
             children: [
@@ -2081,7 +2233,7 @@ class veryDetail3_5 extends StatelessWidget {
               ]),
               Row(children: <Widget>[
                 Image.asset(
-                  'images/gwangbae.jpg',
+                  'gwangbae.jpg',
                   fit: BoxFit.fill,
                   width: 150,
                   height: 150,
@@ -2148,7 +2300,7 @@ class veryDetail3_5 extends StatelessWidget {
                       children: [
                         Column(
                           children: [
-                            Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                            Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                           ],
                         ),
                         Column(
@@ -2174,7 +2326,7 @@ class veryDetail3_5 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
@@ -2200,7 +2352,7 @@ class veryDetail3_5 extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Image.asset('images/youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
+                              Image.asset('youtubelogo.png',fit: BoxFit.fill,width: 35,height: 30,)
                             ],
                           ),
                           Column(
