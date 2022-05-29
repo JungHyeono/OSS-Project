@@ -752,11 +752,7 @@ class _Rabbitcal_regitstraionState extends State<Rabbitcal_regitstraion> {
                             if(_formKey.currentState!.validate()&&_formKey2.currentState!.validate()&&_formKey3.currentState!.validate()&&_formKey4.currentState!.validate()&&_formKey5.currentState!.validate()&&_formKey6.currentState!.validate()&&_formKey7.currentState!.validate()){
                               data=compare();
                                   Navigator.push(
-<<<<<<< HEAD
-                                  context,MaterialPageRoute(builder: (context)=>test(data))
-=======
                                   context,MaterialPageRoute(builder: (context)=>first(data))
->>>>>>> aee76a71f81f0eaa07e4ba91fd63c2f0396ca782
                                   );
                             }
                                    },
