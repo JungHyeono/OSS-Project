@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart'as http;
 import 'dart:convert';
+import 'main.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
@@ -137,6 +138,16 @@ class recommandShop extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text("상품추천"),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body: ListView(
           scrollDirection: Axis.vertical,
@@ -280,6 +291,16 @@ class shopDetail_1 extends StatelessWidget {
             "단백질파우더 추천 순위 Top 5",
             style: TextStyle(color: Colors.white),
           ),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body:
         ListView.builder(
@@ -359,6 +380,16 @@ class shopDetail_2 extends StatelessWidget {
             "유산소운동기구 추천 순위 Top 5",
             style: TextStyle(color: Colors.white),
           ),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body:
         ListView.builder(
@@ -438,6 +469,16 @@ class shopDetail_3 extends StatelessWidget {
             "웨이트운동기구 추천 순위 Top 5",
             style: TextStyle(color: Colors.white),
           ),
+          actions: [
+            IconButton(
+              icon:Icon(Icons.home),
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder:(context)=>Rabbitcalmain()),
+                );
+              },
+            )
+          ],
         ),
         body:
         ListView.builder(

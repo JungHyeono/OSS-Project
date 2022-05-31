@@ -1,5 +1,3 @@
-
-
   _loadDateList() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {

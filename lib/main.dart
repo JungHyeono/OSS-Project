@@ -64,9 +64,9 @@ class Rabbitcalmain extends StatelessWidget {
               onTap:(){
                 Navigator.push(
                     context,
+
                     MaterialPageRoute(builder:(context)=>Check(),)
                 );
-
               },
               trailing:Icon(Icons.check),
             ),
