@@ -13,6 +13,12 @@ apk설치후 이용하면 됩니다.
   shared_preferences: ^2.0.13
   intl: ^0.17.0  
   http: ^0.12.0+2
+  
+  Run/Debug Configurations설정에 다음을 추가하세요. 
+--no-sound-null-safety --web-renderer html
+
+AndroidManifest.xml에 다음을 추가하세요
+ android:usesCleartextTraffic="true"
 
 ## 멤버
 juhojang@hotmail.com(충북대학교, 박주호)
