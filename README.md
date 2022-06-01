@@ -9,7 +9,9 @@ apk설치후 이용하면 됩니다.
 
 # 의존성 명시
 사용된 패키지
-  url_launcher: ^5.7.10
+  url_launcher:
+
+ ^5.7.10
   shared_preferences: ^2.0.13
   intl: ^0.17.0  
   http: ^0.12.0+2
@@ -22,7 +24,7 @@ AndroidManifest.xml에 다음을 추가하세요
 
 # 실행 방법
 
-//동영상
+https://user-images.githubusercontent.com/87304269/171391971-414ebd72-4507-43e5-975c-8f09c2344e76.mp4
 
 1. 앱 실행합니다.
 2. 인바디 등록 페이지에서 사용자 정보 기입합니다.
