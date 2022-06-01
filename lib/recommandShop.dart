@@ -6,16 +6,9 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 Future<void> _launchInBrowser(String url) async {
-  if (await canLaunch(url)) {
-    await launch(
-      url,
-      forceSafariVC: false,
-      forceWebView: false,
-      headers: <String, String>{'my_header_key': 'my_header_value'},
+    launchUrl(
+      Uri.parse(url), mode: LaunchMode.externalApplication
     );
-  } else {
-    throw '웹 호출 실패 $url';
-  }
 }
 
 void main() async{
